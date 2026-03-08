@@ -1,0 +1,506 @@
+
+$(function(){
+
+// ----------------------------------------------------------------------------
+// Opening Slide Show
+// ----------------------------------------------------------------------------
+	var openingSlideShow = function(){
+
+		var options = {
+			easing   : 'easeInQuad',
+			interval : 5000
+		};
+
+		var $container    = $('#container'),
+			$header       = $('#header'),
+			$content      = $('#content'),
+			$footer       = $('#footer'),
+			$qunta        = $('#qunta'),
+			$sound        = $('.sound-select'),
+			$soundOn      = $sound.find('.on'),
+			$soundOff     = $sound.find('.off'),
+			// $enter        = $('.enter'),
+			// $enterImg     = $('.enter').find('img'),
+			/*$page1        = $('.page-01'),
+			$page2        = $('.page-02'),
+			$page3        = $('.page-03'),
+			$page4        = $('.page-04'),
+			$page5        = $('.page-05'),
+			$page6        = $('.page-06'),*/
+			// $loader       = $('.loader'),
+			// $loaderTop    = $('.loader-top'),
+			soundFlg      = false;
+			firstSoundFlg = false;
+			SPSoundFlg    = false;
+
+		// var init = function(){
+
+		// 	$('html,body').animate({ scrollTop: 0 }, '100', function(){
+		// 		$content.hide();
+		// 	});
+		// 	$('.sound-select, .enter, .loader-top, #header, #content, #footer, #qunta').css({ opacity : 0 });
+		// 	imgPreload();
+
+		// }
+
+		// var imgPreload = function(){
+		// 	$container.imagesLoaded(function(){
+		// 		$.cookie("shincho-100satsu-access", 'access', { expires: date, path: '/' });
+		// 		$loader.css({ display : 'block' }).delay(1000).fadeOut(1500, function(){
+		// 			//$sound.css({ visibility : 'visible' }).stop().animate({ 'opacity' : 1 },500, 'linear');
+		// 			$enter.css({ visibility : 'visible' }).stop().animate({ 'opacity' : 1 },500, 'linear');
+		// 			eventSet();
+		// 		});
+		// 	});
+		// }
+
+		// var eventSet = function(){
+		// 	$soundOn.on('click', function(){ $soundOnClick($(this)) });
+		// 	$soundOff.on('click', function(){ $soundOffClick($(this)) });
+		// 	$enterImg.on('click', function(){ $enterClick($(this)) });
+		// }
+
+		var $soundOnClick = function($elm){
+			$sound.stop().fadeOut(500, 'linear');
+			$enter.css({ visibility : 'visible' }).stop().animate({ 'opacity' : 1 },500, 'linear');
+			document.getElementById('click-sound').play();
+			SoundStart();
+			soundFlg = true;
+			SPSoundFlg = true;
+			firstSoundFlg = false;
+			$('.sound-check').addClass('on');
+			$('.sound-check').find('img').attr('src', '/assets/img/btn/btn-sound-on_02.png');
+			$.cookie('shincho-sound', 'sound', { expires: date, path: '/' });
+			$.cookie("shincho-100satsu-access", 'access', { expires: date, path: '/' });
+		}
+
+		var $soundOffClick = function($elm){
+			$sound.stop().fadeOut(500, 'linear');
+			$enter.css({ visibility : 'visible' }).stop().animate({ 'opacity' : 1 },500, 'linear');
+			soundFlg = false;
+			$('.sound-check').find('img').attr('src', '/assets/img/btn/btn-sound-off_02.png');
+			SoundOFFCheck();
+			$.cookie("shincho-100satsu-access", 'access', { expires: date, path: '/' });
+		}
+	}
+
+// ----------------------------------------------------------------------------
+// Sound
+// ----------------------------------------------------------------------------
+	SoundStart = function(){
+		var $soundCheck  = $('.sound-check'),
+			$soundClick  = $('.sound-click'),
+			bgm           = document.getElementById('bgm-sound'),
+			bgmSP         = document.getElementById('bgm-sound-sp'),
+			clickSound    = document.getElementById('click-sound'),
+			checkflg      = true;
+			ClickSoundFlg = true;
+
+		$soundCheck.on('click', function(){ $soundCheckClick($(this)) });
+
+		var $soundCheckClick = function($elm){
+			if( checkflg === true ){
+				checkflg = false;
+				firstSoundFlg = false;
+
+				if( $elm.hasClass('on') ){
+					$elm.removeClass('on').find('img').attr('src', '/assets/img/btn/btn-sound-off_02.png');
+					ClickSoundFlg = false;
+					$.removeCookie('shincho-sound', { expires: date, path: '/'});
+					bgm.pause();
+					bgmSP.pause();
+					//bgm.currentTime = 0;
+				} else{
+					$elm.addClass('on').find('img').attr('src', '/assets/img/btn/btn-sound-on_02.png');
+					ClickSoundFlg = true;
+					$.cookie('shincho-sound', 'sound', { expires: date, path: '/' });
+					bgm.play();
+					clickSound.play();
+				}
+
+				setTimeout(function(){
+					checkflg = true;
+				}, 300);
+			}
+		}
+
+		$soundClick.on('click', function(e){
+			if( ClickSoundFlg === true ){
+
+				if( ua.uaObj.uaDevice === 'device-mobile' ){
+					clickSound.pause();
+					clickSound.currentTime = 0;
+					clickSound.play();
+				} else{
+					e.preventDefault();
+
+					var href = $(this).attr('href');
+
+					clickSound.pause();
+					clickSound.currentTime = 0;
+					clickSound.play();
+
+					if( href ){
+						if( $(this).hasClass('window-open') ){
+							setTimeout(function(){
+								window.open().location.href = href;
+							}, 1000);
+						} else if( $(this).hasClass('no-window') ){
+							return false;
+						} else{
+							setTimeout(function(){
+								location.href = href;
+							}, 1000);
+						}
+					}
+				}
+			}
+		});
+	}
+
+	var SoundOFFCheck = function(){
+		$('.sound-check').on('click', function(){
+			if( firstSoundFlg === true ){
+				firstSoundFlg = false;
+				$('.sound-check').find('img').attr('src', '/assets/img/btn/btn-sound-on_02.png');
+				$('.sound-check').addClass('on');
+				SoundStart();
+				document.getElementById('bgm-sound').play();
+				$.cookie('shincho-sound', 'sound', { expires: date, path: '/' });
+			}
+		});
+	}
+
+
+// ----------------------------------------------------------------------------
+// More Button Click
+// ----------------------------------------------------------------------------
+var moreClick = function(){
+	var $more = $('.nav-more-01');
+	var list1 = [];
+	var list2 = [];
+
+	var $listContent = $('[class^="item-"]');
+	var currentIndex = 20; // 初期表示件数
+
+	$listContent.each(function() {
+			var number = parseInt($(this).attr('class').match(/-([0-9]+)/)[1]);
+			var $thisItem = $(this);
+
+			if (number >= 1 && number <= 20) {
+					list1.push($thisItem);
+					$thisItem.css('display', 'block');
+			} else if (number >= 21) {
+					list2.push($thisItem);
+					$thisItem.css('display', 'none');
+			}
+	});
+
+	$more.on('click', function() {
+		var elemCount = currentIndex + 42;
+		$listContent.each(function() {
+				var number = parseInt($(this).attr('class').match(/-([0-9]+)/)[1]);
+				if (number >= currentIndex && number <= elemCount) {
+						$(this).delay((number - currentIndex) * 50).fadeTo(800, 1);
+				}
+		});
+		currentIndex = elemCount;
+
+		if (currentIndex > $listContent.length) {
+				$(this).hide();
+		}
+	});
+}
+
+
+
+// ----------------------------------------------------------------------------
+// DOM Set
+// ----------------------------------------------------------------------------
+	var setDOM = function(data){
+		var $listIndex = $('.list-index-01'),
+			$dataLen   = 0,
+			category   = '',
+			num        = [],
+			numShuffle = [];
+
+		if( ua.uaObj.uaBrouser !== 'ie8' ){
+			$dataLen   = Object.keys(data).length;
+		} else{
+			$dataLen   = 107;
+			$('.sound-check').hide();
+			$.cookie('shincho-sound', 'sound', { expires: date, path: '/' });
+			$.cookie("shincho-100satsu-access", 'access', { expires: date, path: '/' });
+		}
+
+		$.each( data, function(i){
+
+			switch ( data[i]['category'] ){
+				case '泣ける本' :
+					category = 'cry';
+				break;
+				case 'ヤバイ本' :
+					category = 'dangerous';
+				break;
+				case '愛する本' :
+					category = 'love';
+				break;
+				case '考える本' :
+					category = 'think';
+				break;
+				case 'シビレル本' :
+					category = 'becomenumb';
+				break;
+			}
+
+			var listHTML   = '<li data-book-category="' + category +'"><a href="/detail/index.html?book'+ data[i]['id'] +'?'+ category +'"><img src="' + data[i]['image'] +'" alt=""></a></li>';
+
+			$listIndex.append(listHTML);
+
+			if( $dataLen === i+1 ){
+				if( !$.cookie("shincho-100satsu-access") && ua.uaObj.uaBrouser !== 'ie8' ){
+					openingSlideShow();
+				} else{
+					$('.lyt-opening-01').hide();
+					$('#header').css({ visibility : 'visible', display : 'block' });
+					$('#content').css({ visibility : 'visible' });
+					$('#footer').css({ visibility : 'visible' });
+					$('#qunta').css({ visibility : 'visible' });
+
+					if( ua.uaObj.uaBrouser !== 'ie8' ){
+						if( $.cookie('shincho-sound') ){
+							$('.sound-check').addClass('on');
+							$('.sound-check').find('img').attr('src', '/assets/img/btn/btn-sound-on_02.png');
+							document.getElementById('bgm-sound').play();
+							SoundStart();
+						} else{
+							var soundCheckFirstFlag = true;
+							$('.sound-check').find('img').attr('src', '/assets/img/btn/btn-sound-off_02.png');
+							$('.sound-check').on('click', function(){
+								if( soundCheckFirstFlag === true ){
+									soundCheckFirstFlag = false;
+									$('.sound-check').addClass('on');
+									$('.sound-check').find('img').attr('src', '/assets/img/btn/btn-sound-on_02.png');
+									document.getElementById('bgm-sound').play();
+									SoundStart();
+									$.cookie('shincho-sound', 'sound', { expires: date, path: '/' });
+								}
+							});
+						}
+					}
+				}
+
+				for( var i=1; i<=$listIndex.find('li').length; i++ ){
+					num.push(i);
+				}
+
+				Array.prototype.shuffle = function() {
+					var i = this.length;
+					while(i){
+						var j = Math.floor(Math.random()*i);
+						var t = this[--i];
+						this[i] = this[j];
+						this[j] = t;
+					}
+					return this;
+				}
+				numShuffle = num.shuffle();
+
+				// 100蜀贋ｸ隕ｧ縺ｮ譛ｬ繧偵Λ繝ｳ繝繝驟咲ｽｮ
+				$listIndex.find('li').each(function(i){
+					$(this).addClass('item-' + numShuffle[i] ).css('order', numShuffle[i]);
+				});
+
+				if( ua.uaObj.uaDevice !== 'device-mobile' && ua.uaObj.uaDevice !== 'ipad' ){
+					PlayMarkHover();
+				}
+
+				moreClick();
+			};
+		});
+	}
+
+var bookCategoryTabChange = function() {
+    var $tabCategoryButton = $('[data-book-category-button]');
+    var currentClass = 'is-current';
+    var $moreButton = $('.nav-more-01');
+
+    $tabCategoryButton.on('click', function() {
+        var $this = $(this),
+            category = $this.data('book-category-button');
+        var $tabCategoryContent = $('[data-book-category]');
+
+        $tabCategoryButton.removeClass(currentClass);
+        $this.addClass(currentClass);
+
+        if (category === 'all') {
+            $tabCategoryContent.show();
+						moreClick();
+            $moreButton.show();
+        } else {
+            $moreButton.hide();
+            $tabCategoryContent.each(function() {
+                var $this = $(this);
+                var bookCategory = $this.data('book-category');
+
+                if (category === bookCategory) {
+                    $this.show();
+                } else {
+                    $this.hide();
+                }
+            });
+        }
+    });
+}
+
+bookCategoryTabChange();
+
+// ----------------------------------------------------------------------------
+// Gacha
+// ----------------------------------------------------------------------------
+var initGacha = function(){
+	var $gachaArea = $('.gacha-area');
+	if( !$gachaArea.length ){
+		return;
+	}
+
+	var $gachaButton = $gachaArea.find('.gacha-button');
+	var $gachaResultLink = $gachaArea.find('.gacha-result-link');
+	var $gachaResultImg = $gachaArea.find('.gacha-result');
+
+	var getItems = function(){
+		var items = [];
+		$('.list-index-01').find('li a').each(function(){
+			var $a = $(this);
+			var href = $a.attr('href') || '';
+			var src = $a.find('img').attr('src') || '';
+			var match = src.match(/\/([0-9]{6})\./) || href.match(/book([0-9]{6})/);
+
+			if( match ){
+				var id = match[1];
+				items.push({
+					id: id,
+					src: src,
+					href: href || ('/detail/index.html?book' + id)
+				});
+			}
+		});
+		return items;
+	};
+
+	var setItem = function(item){
+		$gachaResultImg.attr('src', item.src);
+		$gachaResultLink.attr('href', item.href);
+		$gachaResultLink.removeClass('is-disabled').attr('aria-disabled', 'false');
+	};
+
+	$gachaResultLink.addClass('is-disabled').attr('aria-disabled', 'true').removeAttr('href');
+	$gachaResultLink.on('click', function(e){
+		if( $(this).hasClass('is-disabled') ){
+			e.preventDefault();
+		}
+	});
+
+	var rolling = false;
+	var intervalId = null;
+
+	$gachaButton.on('click', function(){
+		if( rolling ){
+			return;
+		}
+
+		var items = getItems();
+		if( !items.length ){
+			return;
+		}
+
+		rolling = true;
+		var elapsed = 0;
+		var step = 50;
+		var total = 3000;
+
+		intervalId = setInterval(function(){
+			var item = items[Math.floor(Math.random() * items.length)];
+			setItem(item);
+			elapsed += step;
+			if( elapsed >= total ){
+				clearInterval(intervalId);
+				intervalId = null;
+				rolling = false;
+			}
+		}, step);
+	});
+}
+
+initGacha();
+
+
+	var PlayMarkHover = function(){
+		$('.movie').find('a').on('mouseenter', function(){
+			var $img = $(this).find('.play').find('img');
+			$img.attr('src',$img.attr('src').replace('.png','_o.png'));
+		});
+
+		$('.movie').find('a').on('mouseleave', function(){
+			var $img = $(this).find('.play').find('img');
+			$img.attr('src',$img.attr('src').replace('_o.png','.png'));
+		});
+	}
+
+	// ----------------------------------------------------------------------------
+// 一覧ページをクリックで、タブを絞り込ませる
+// ----------------------------------------------------------------------------
+var anchorTabShow = function(){
+	// URLのハッシュを取得
+	var hash = location.hash;
+
+	// ハッシュ値によって表示するタブを切り替える
+	if (hash) {
+		var $tabCategoryButtonTarget = $('[data-book-category-button]').filter('[data-book-category-button="' + hash.replace('#', '') + '"]');
+		$tabCategoryButtonTarget.trigger('click');
+	}
+}
+
+// ----------------------------------------------------------------------------
+// JSON Data Load
+// ----------------------------------------------------------------------------
+	var getJSONData = function(path,type){
+		var dfd=$.Deferred();
+		$.ajax({
+			cache:false,
+			url:path,
+			type:type,
+			data:{},
+			dataType:"json",
+			success:function(data){
+				dfd.resolve(data);
+			},
+			error:function(data){
+				dfd.reject(data);
+			}
+		});
+		return dfd.promise();
+	}
+
+	$(window).load(function(){
+/*
+		getJSONData('/api/s_book100.php', 'GET').done(
+*/
+		getJSONData('/api/s_book100.json', 'GET').done(
+			function(data){
+				setDOM(data);
+
+				anchorTabShow();
+			}
+		);
+/*
+		getJSONData('/api/s_movie100.php', 'GET').done(
+*/
+		// getJSONData('/api/s_movie100.json', 'GET').done(
+		// 	function(data){
+		// 		setmovieDOM(data);
+		// 	}
+		// );
+	});
+
+});

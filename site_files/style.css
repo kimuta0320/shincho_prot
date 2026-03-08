@@ -1,0 +1,8035 @@
+@charset "UTF-8";
+
+/* window-size + 17px */
+/* -------------------------------------------------------------------
+
+  Base Style
+
+-------------------------------------------------------------------- */
+/*  Universal Reset
+--------------------------------------- */
+/* line 21, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+html,
+body,
+div,
+main,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+svg,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: top;
+	background: transparent;
+}
+
+/*  HTML5 Display Definitions
+--------------------------------------- */
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+main,
+section,
+nav,
+article,
+aside,
+hgroup,
+menu,
+summary,
+svg,
+header,
+footer,
+figure,
+figcaption,
+details {
+	display: block;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+video,
+audio,
+canvas {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+ *vertical-align: auto;
+	zoom: 1;
+ *display: inline;
+}
+
+/* line 40, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+[hidden] {
+	display: none;
+}
+
+/*  Base
+--------------------------------------- */
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+body {
+	line-height: 1.8;
+	color: #333333;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-print-color-adjust: exact;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+* html body {
+	font-size: 84%;
+}
+
+/* line 59, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+*:first-child + html body {
+	font-size: 84%;
+}
+
+/*  Links
+--------------------------------------- */
+/* line 65, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+a {
+	color: black;
+	text-decoration: none;
+}
+
+/* line 70, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+a:link,
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+/* line 76, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+a:hover,
+a:focus {
+	text-decoration: underline;
+	outline: none;
+}
+
+/* line 81, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+a:active {
+	color: black;
+	text-decoration: none;
+}
+
+/*  Typography
+--------------------------------------- */
+/* line 89, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.5;
+	font-size: 100%;
+}
+
+/* line 94, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* line 99, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+strong,
+b {
+	font-weight: bold;
+}
+
+/* line 103, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+sup {
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+	line-height: 0;
+	font-size: 65%;
+}
+
+/* line 111, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+sub {
+	position: relative;
+	top: 2px;
+	vertical-align: middle;
+	line-height: 0;
+	font-size: 65%;
+}
+
+/* line 119, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+pre {
+	font-family: monospace, sans-serif;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+/*  Horizontal Rule
+--------------------------------------- */
+/* line 127, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+hr {
+	display: none;
+}
+
+/*  Embedded Content
+--------------------------------------- */
+/* line 133, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+/* line 138, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/*  List Content
+--------------------------------------- */
+/* line 144, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+ul,
+ol {
+	list-style: none;
+}
+
+/*  Tables
+--------------------------------------- */
+/* line 150, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+table {
+	border: 0 none;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/* line 157, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+table th,
+table td {
+	border: 0 none;
+	vertical-align: top;
+	font-size: 1em;
+	text-align: left;
+	font-weight: normal;
+}
+
+/*  Forms
+--------------------------------------- */
+/* line 168, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+input::-moz-focus-inner, button::-moz-focus-inner {
+ border: 0;
+ padding: 0;
+}
+
+/* line 173, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+fieldset {
+	border: 0 none;
+}
+
+/* line 177, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+legend {
+	display: none;
+}
+
+/* line 181, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+label {
+	cursor: pointer;
+}
+
+/* line 185, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+input {
+	vertical-align: middle;
+	border-radius: 0;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	outline: none;
+	border-radius: 0;
+}
+
+/* line 194, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+input[type="text"],
+input[type="image"] {
+	-webkit-appearance: none;
+}
+
+/* line 199, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* line 204, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+textarea {
+	vertical-align: top;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	resize: none;
+	outline: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+/* line 213, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+select {
+	line-height: normal;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	outline: none;
+}
+
+/*  Selection
+--------------------------------------- */
+/* line 221, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+*::selection {
+	color: white;
+	background-color: black;
+}
+
+/* line 225, C:/_works/anken/100satsu2015/htdocs/_src/sass/_base.scss */
+*::-moz-selection {
+ color: white;
+ background-color: black;
+}
+
+/* -------------------------------------------------------------------
+
+  Structure
+
+-------------------------------------------------------------------- */
+/* -----------------------------------------------------
+  Container
+----------------------------------------------------- */
+/* line 12, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+html {
+	height: 100%;
+	min-height: 100%;
+	overflow-y: scroll;
+}
+
+/* line 18, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+body {
+	/* height: 100%;
+	min-height: 100%;
+	background-color: transparent;
+	background-repeat: repeat-y;
+	background-position: 50% 0; */
+	/* background-color: #ffe900;
+	background-image: url(/assets/img/img/bg_body_pc.png);
+	background-size: 100% auto;
+	word-wrap: break-word;
+	position: relative;
+	background-position: top center; */
+}
+
+/* line 26, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#container {
+	height: 100%;
+	min-height: 100%;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+.no-scroll {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+html {
+	-webkit-background-size: 990px 766px;
+	-moz-background-size: 990px 766px;
+	-o-background-size: 990px 766px;
+	background-size: 990px 766px;
+}
+}
+
+/* -----------------------------------------------------
+  Header
+----------------------------------------------------- */
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#header {
+	position: fixed;
+	top: 20px;
+	left: 79px;
+	z-index: 100;
+	width: 89px;
+	height: 132px;
+}
+
+/* line 54, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#header #header-inner {
+	position: relative;
+}
+
+/* line 57, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#header #header-inner #btn-hamburger {
+	cursor: pointer;
+}
+
+/* line 60, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#header #header-inner #btn-hamburger img {
+	width: 50%;
+}
+
+/* line 67, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-pagetop {
+	position: fixed;
+	top: 22px;
+	right: 75px;
+	z-index: 10;
+	visibility: visible;
+	cursor: pointer;
+ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+#nav-pagetop img {
+	width: 30px;
+}
+
+/* line 78, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-pagetop-sp {
+	position: fixed;
+	top: 36px;
+	right: 30px;
+	z-index: -1;
+	visibility: hidden;
+	cursor: pointer;
+ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+/* line 88, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-pagetop-sp img {
+	width: 36px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 94, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#header {
+	left: 15px;
+	width: 56px;
+	height: 54px;
+}
+
+/* line 100, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-pagetop {
+	z-index: -1;
+	visibility: hidden;
+}
+
+/* line 105, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-pagetop-sp {
+	z-index: 10;
+	visibility: visible;
+}
+}
+
+/* -----------------------------------------------------
+  Nav Global
+----------------------------------------------------- */
+/* line 115, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container {
+	position: fixed;
+	top: 0;
+	left: -275px;
+	z-index: 10000;
+	width: 275px;
+	height: 100%;
+	background-color: #fff;
+}
+
+/* line 124, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-close {
+	padding: 36px 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* line 129, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-close img {
+	width: 53px;
+}
+
+/* line 135, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01.scroll {
+	overflow-y: scroll;
+}
+
+/* line 139, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 {
+	height: 870px;
+}
+
+/* line 142, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 #nav-global {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/* line 146, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 #nav-global img {
+	width: 198px;
+}
+
+/* line 151, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .btn-buy {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* line 155, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .btn-buy img {
+	width: 198px;
+}
+
+/* line 160, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .list-social-01 {
+	max-width: 198px;
+  margin: 0 auto 30px;
+	display: flex;
+	text-align: center;
+	column-gap: 8px;
+}
+
+/* line 164, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .list-social-01 li {
+	width: 33%;
+}
+
+/* line 168, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .list-social-01 li img {
+	width: 100%;
+}
+
+/* line 174, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .sound-check {
+	margin-bottom: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* line 179, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .sound-check img {
+	width: 198px;
+}
+
+/* line 184, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .related-banner {
+	padding: 0 0 7px 40px;
+}
+
+/* line 187, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .related-banner li {
+	padding-bottom: 18px;
+}
+
+/* line 190, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .related-banner li:last-child {
+	padding-top: 2px;
+}
+
+/* line 194, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .related-banner li img {
+	vertical-align: top;
+	width: 170px;
+}
+
+/* line 201, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 #copyright {
+	padding-left: 40px;
+	color:#A6A6A6;
+	font-size:12px;
+	margin-bottom:10px;
+}
+
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 .info {
+	padding-left: 40px;
+	color:#A6A6A6;
+	font-size:12px;
+}
+/* line 204, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 #copyright img {
+	width: 170px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 215, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#nav-global-container #nav-global-inner-01 #nav-global-inner-02 {
+	height: 940px;
+}
+}
+
+/* line 225, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#click-sound,
+#enter-sound,
+#bgm-sound,
+#bgm-sound-sp {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+/* -----------------------------------------------------
+  Content
+
+#content {
+	min-height: 100%;
+	background: url("/assets/img/bg/bg_content_left.png") repeat-y 0 0, url("/assets/img/bg/bg_content_right.png") repeat-y 100% 0;
+	visibility: hidden;
+	background-attachment: fixed;
+	background-size: auto 100%;
+}
+----------------------------------------------------- */
+/* line 235, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+
+#content {
+	background-color: #ffe900;
+	background-image: url(/assets/img/img/bg_body_pc.png);
+	background-size: 100% auto;
+	word-wrap: break-word;
+	position: relative;
+	background-position: top center;
+}
+
+/*.ipad #content{
+	background-image: none;
+}*/
+
+
+@media only screen and (max-width: 667px) {
+
+/*#content {
+	background: none;
+}
+
+.sp-back:before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	background: url(/assets/img/bg/bg_content_sp.png) center/cover no-repeat;
+	-webkit-background-size: cover;
+}
+
+
+.ipad .sp-back:before {
+	background-image:none;
+}*/
+
+	#content {
+		background-image: url(/assets/img/img/bg_body_sp.png);
+		background-color: #FFE900;
+		word-wrap: break-word;
+		position: relative;
+		background-position: top center;
+	}
+}
+
+/*==================
+jenre-list
+===================*/
+
+.jenre-page #content:before {
+	bottom: 50px;
+}
+
+.jenre-page #content:after{
+	bottom: 50px;
+}
+
+.jenre-page-list #content:before {
+	bottom: 50px;
+}
+
+.jenre-page-list #content:after{
+	bottom: 45px;
+}
+
+@media only screen and (max-width: 667px) and (min-height: 490px) {
+#content:before,
+#content:after{
+	top:auto;
+	bottom:0;
+}
+}
+
+/* line 241, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#content #content-inner {
+	padding-bottom: 80px;
+	position: relative;
+	z-index: 3;
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+/* line 247, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#content #content-inner .img-bg-01 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@media only screen and (max-width: 667px) {
+
+/* #content {
+	background: none;
+} */
+
+/* #container::before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	background: url(/assets/img/bg/bg_content_sp_p.png) center/cover no-repeat;
+	-webkit-background-size: cover;
+} */
+}
+
+@media only screen and (max-width: 414px) {
+
+/* #content {
+	background: none;
+} */
+
+/* #container::before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	background: url(/assets/img/bg/bg_content_sp.png) center/cover no-repeat;
+	-webkit-background-size: cover;
+} */
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 259, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#content #content-inner {
+	padding-bottom: 50px;
+	-webkit-background-size: 316px 26px;
+	-moz-background-size: 316px 26px;
+	-o-background-size: 316px 26px;
+	background-size: 316px 26px;
+}
+
+/* line 263, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#content #content-inner .img-bg-01 {
+	left: -1px;
+}
+
+/* line 266, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#content #content-inner .img-bg-01 img {
+	width: 80px;
+}
+}
+
+.units-row .img-centered {
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width: 660px) {
+	.units-row .img-centered {
+		margin-bottom: 10px;
+	}
+}
+
+
+/*------------------------------------------------------
+ad_2019
+------------------------------------------------------*/
+.ad_2019 .newsPaper_contentHeader {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.ad_2019 .newsPaper_text {
+	font-size: 16px;
+	line-height: 1.8;
+	margin-bottom: 88px;
+}
+
+.ad_2019 .newPaper_contentBody {
+	margin-bottom: 0;
+}
+
+.ad_2019 .newsPaper_textLink {
+	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+}
+
+.ad_2019 .newsPaper_textLink:hover {
+	color: #ea6182;
+}
+
+.ad_2019 .newsPaper-content {
+	margin-bottom: 64px;
+}
+
+.ad_2019 .newsPaper-content_image {
+	text-align: center;
+}
+
+.ad_2019 .newsPaper-content_image img {
+	width: 440px;
+}
+
+.ad_2019 .newsPaper-content_image .newsPaper-content_imageItem {
+	width: auto;
+}
+
+.ad_2019 .newsPaper-content_noteText {
+	font-size: 14px;
+}
+
+.ad_2019 .contents-wrap {
+	max-width: 440px;
+}
+@media screen and (max-width: 660px) {
+	.ad_2019 .contents-wrap {
+		width: 70%;
+	}
+	.ad_2019 .newsPaper-content {
+		margin-bottom: 44px;
+	}
+	.ad_2019 .newsPaper_contentHeader {
+		margin-bottom: 32px;
+	}
+	.ad_2019 .newsPaper_contentHeader img {
+		width: 213.5px;
+	}
+	.ad_2019 .newsPaper_text {
+		font-size: 14px;
+		margin-bottom: 36px;
+	}
+	.ad_2019 .newsPaper-content_image .newsPaper-content_imageItem {
+		width: 156px;
+	}
+}
+
+
+/*------------------------------------------------------
+ad_index
+------------------------------------------------------*/
+.ad_index .newsPaper_contentHeader {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.ad_index .newsPaper_text {
+	font-size: 16px;
+	line-height: 1.8;
+	margin-bottom: 88px;
+}
+
+.ad_index .newPaper_contentBody {
+	margin-bottom: 0;
+}
+
+.ad_index .newsPaper_textLink {
+	font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+}
+
+.ad_index .newsPaper_textLink:hover {
+	color: #ea6182;
+}
+
+.ad_index .newsPaper-content {
+	margin-bottom: 64px;
+}
+
+.ad_index .newsPaper-content_image {
+	text-align: center;
+}
+
+.ad_index .newsPaper-content_image img {
+	width: 440px;
+}
+
+.ad_index .newsPaper-content_noteText {
+	font-size: 14px;
+}
+
+.ad_index .contents-wrap {
+	max-width: 440px;
+}
+@media screen and (max-width: 660px) {
+	.ad_index .contents-wrap {
+		width: 70%;
+	}
+	.ad_index .newsPaper-content {
+		margin-bottom: 44px;
+	}
+	.ad_index .newsPaper_contentHeader {
+		margin-bottom: 32px;
+	}
+	.ad_index .newsPaper_contentHeader img {
+		width: 213.5px;
+	}
+	.ad_index .newsPaper_text {
+		font-size: 14px;
+		margin-bottom: 36px;
+	}
+	.ad_index .newsPaper-content_image .newsPaper-content_imageItem {
+		width: 156px;
+	}
+}
+
+
+/* -----------------------------------------------------
+  Footer
+----------------------------------------------------- */
+/* line 278, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+footer {
+	height: 65px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	background-color: #FFE900;
+}
+
+#tagline {
+	position: absolute;
+    right: 9px;
+    bottom: 9px;
+    margin-bottom: 0;
+    width: 153px;
+    z-index: 3;
+}
+
+#tagline img {
+	width:100%;
+}
+
+@media screen and (max-width: 667px) {
+footer {
+	height: 50px;
+	background-size: auto 120px;
+	background-position: top;
+}
+
+#tagline {
+	width: 155px;
+}
+
+}
+
+#site-logo-footer {
+	position: absolute;
+	left: 22px;
+    bottom: 14px;
+    margin-bottom: 0;
+    width: 133px;
+    z-index: 2;
+}
+
+#site-logo-footer img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+#footer-qunta {
+	position: fixed;
+	left: 42px;
+	bottom: 35px;
+	z-index: 1;
+	width: 136px;
+	margin-bottom: 0;
+}
+#footer-qunta img {
+	width: 100%;
+}
+
+#animation-wrapper,
+#animation-wrapper-repeat1,
+#animation-wrapper-repeat2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 94%;
+	height: 100%;
+    max-width: 527px;
+    margin: auto;
+}
+
+#animation-wrapper-repeat1 {
+	top: 6057px;
+	height: auto;
+}
+
+#animation-wrapper-repeat2 {
+	top: 11740px;
+	height: auto;
+}
+
+.animation-image {
+	position: absolute;
+	z-index: 2;
+}
+.animation-01 {
+	top: 231px;
+    width: 267px;
+    margin-left: 584px;
+}
+.animation-02 {
+	top: 1120px;
+    width: 269px;
+    margin-left: -300px;
+}
+.animation-03 {
+	top: 2074px;
+    width: 182px;
+    margin-left: 618px;
+}
+.animation-04 {
+	top: 3266px;
+	width: 268px;
+	margin-left: -338px;
+}
+.animation-05 {
+	top: 4272px;
+	width: 172px;
+	margin-left: 571px;
+}
+.animation-06 {
+	top: 5357px;
+	width: 182px;
+	margin-left: -324px;
+}
+
+@media screen and (max-width: 1023px) {
+#footer-qunta {
+	width: 13%;
+	left: 10px;
+	bottom: 42px;
+}
+}
+
+@media screen and (max-width: 667px) {
+
+#site-logo-footer {
+	width: 100px;
+	left: 10px;
+	bottom: 5px;
+}
+
+#footer-qunta {
+	width: 18.7%;
+	left: 5px;
+	bottom: 25px;
+	margin-left: 0;
+}
+
+#footer-qunta img {
+	width: 100%;
+}
+
+#animation-wrapper-repeat1,
+#animation-wrapper-repeat2,
+#animation-wrapper-repeat3 {
+	display: none;
+}
+
+.animation-01,
+.animation-02, 
+.animation-03,
+.animation-04,
+.animation-05,
+.animation-06 {
+	display: none;
+}
+
+.animation-bird {
+	width: 91px;
+	right: 19px;
+	margin-left: 0;
+	bottom: 145px;
+}
+}
+
+#qunta {
+	position: fixed;
+	right: 50%;
+	bottom: 40px;
+	z-index: 2;
+	width: 336px;
+	margin-bottom: 0;
+	margin-right: -690px;
+	text-align: right;
+}
+#qunta img {
+	width: 336px;
+}
+
+@media screen and (max-width: 667px) {
+
+#qunta {
+	width: 130px;
+	right: -50px;
+	margin-right: 0;
+}
+#qunta img {
+	width: 100%;
+}
+}
+
+/* line 287, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer.jenre {
+	visibility: hidden;
+}
+
+/* line 289, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer.cry {
+	background-image: url("/assets/img/bg/bg_footer_cry.png");
+}
+
+/* line 290, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer.love {
+	background-image: url("/assets/img/bg/bg_footer_love.png");
+}
+
+/* line 291, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer.think {
+	background-image: url("/assets/img/bg/bg_footer_think.png");
+}
+
+/* line 292, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer.dangerous {
+	background-image: url("/assets/img/bg/bg_footer_dangerous.png");
+}
+
+/* line 293, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer.becomenumb {
+	background-image: url("/assets/img/bg/bg_footer_becomenumb.png");
+}
+
+/* line 295, C:/_works/anken/100satsu2015/htdocs/_src/sass/_structure.scss */
+#footer #footer-inner {
+	position: relative;
+	height: 63px;
+}
+
+
+/* -------------------------------------------------------------------
+
+  Modules
+
+-------------------------------------------------------------------- */
+/* -----------------------------------------------------
+  heading
+----------------------------------------------------- */
+/*  hdg-level1-01
+--------------------------------------- */
+/* line 16, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+/*** mod 2016/06/29 誘導バナー追加 ***/
+.hdg-level1-01 {
+	padding: 35px 0 0;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.hdg-level1-01 img {
+	width: 100%;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 23, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level1-01 {
+	padding: 20px 0 25px;
+}
+
+
+
+/* line 26, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level1-01 img {
+	width: 300px;
+}
+}
+
+/*  hdg-level1-02
+--------------------------------------- */
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level1-02 {
+	padding: 73px 0 50px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 41, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level1-02 {
+	padding: 36px 0 25px;
+	width: 100%;
+	text-align: center;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level1-02 img {
+	width: 142px;
+}
+}
+
+/*  hdg-level2-01
+--------------------------------------- */
+/* line 54, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-01 {
+	padding-top: 160px;
+	padding-bottom: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 62, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-01 {
+	padding-top: 80px;
+	padding-bottom: 25px;
+}
+
+/* line 66, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-01.pt {
+	padding-top: 90px;
+}
+
+/* line 70, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-01 img {
+	width: 227px;
+}
+}
+
+/*  hdg-level2-02
+--------------------------------------- */
+/* line 78, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-02 {
+	padding-top: 150px;
+	padding-bottom: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 86, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-02 {
+	padding-top: 75px;
+	padding-bottom: 25px;
+}
+
+/* line 90, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.hdg-level2-02 img {
+	width: 123px;
+}
+}
+
+/* -----------------------------------------------------
+  Document
+----------------------------------------------------- */
+/*  doc-center-01
+--------------------------------------- */
+/* line 103, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.doc-center-01 {
+	margin: 0 auto 40px;
+	width: 440px;
+	text-align: center;
+}
+
+/* line 108, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.doc-center-01 img {
+	width: 100%;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 114, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.doc-center-01 {
+	margin: 0 auto 23px;
+	width: 220px;
+	font-size: 86%;
+}
+}
+
+/* -----------------------------------------------------
+  Tab
+----------------------------------------------------- */
+.tab-category {
+	max-width: 700px;
+	margin: 40px auto 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px 20px;
+}
+.tab-category + .tab-category {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.gacha-area {
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.gacha-button {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	display: block;
+	cursor: pointer;
+}
+
+.gacha-result {
+	display: block;
+	height: auto;
+}
+
+.gacha-result-link {
+	display: inline-block;
+}
+
+.tab-button {
+	width: calc(20% - 16px);
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	cursor: pointer;
+}
+.tab-button-all {
+	max-width: 500px;
+	width: 100%;
+}
+.tab-button img {
+	width: 100%;
+}
+.tab-button {
+	position: relative;
+}
+.tab-button.is-current {
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.tab-button.is-current img {
+	opacity: 0;
+}
+.tab-button-all.is-current {
+	background-image: url(/assets/img/btn/btn_tab01_select.png);
+}
+.tab-button-love.is-current {
+	background-image: url(/assets/img/btn/btn_tab02_select.png);
+}
+.tab-button-becomenumb.is-current {
+	background-image: url(/assets/img/btn/btn_tab03_select.png);
+}
+.tab-button-think.is-current {
+	background-image: url(/assets/img/btn/btn_tab04_select.png);
+}
+.tab-button-dangerous.is-current {
+	background-image: url(/assets/img/btn/btn_tab05_select.png);
+}
+.tab-button-cry.is-current {
+	background-image: url(/assets/img/btn/btn_tab06_select.png);
+}
+
+
+
+@media screen and (max-width: 660px) {
+	.tab-category {
+		max-width: 300px;
+		margin: 0 auto;
+		gap: 16px;
+	}
+	.tab-button {
+		width: calc(50% - 8px);
+	}
+	.gacha-button {
+		width: 100%;
+	}
+	.tab-button-all {
+		width: 100%;
+	}
+}
+
+
+/* -----------------------------------------------------
+  List
+----------------------------------------------------- */
+/*  list-jenre-01
+--------------------------------------- */
+/* line 128, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 {
+	margin: 0 auto;
+	width: 450px;
+	position: relative;
+}
+
+/* line 135, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01.love {
+	height: 1462px;
+}
+
+/* line 139, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01.think {
+	height: 1463px;
+}
+
+/* line 143, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01.becomenumb,
+.list-jenre-01.dangerous,
+.list-jenre-01.cry {
+	height: 1672px;
+}
+
+/* line 147, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li {
+	position: absolute;
+	-webkit-box-shadow: 1px 1px 2px #666666;
+	-moz-box-shadow: 1px 1px 2px #666666;
+	box-shadow: 1px 1px 2px #666666;
+}
+
+/* line 151, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-1 {
+	top: 0px;
+	left: 0px;
+}
+
+/* line 152, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-2 {
+	top: 0px;
+	left: 150px;
+}
+
+/* line 153, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-3 {
+	top: 0px;
+	left: 300px;
+}
+
+/* line 155, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-4 {
+	top: 209px;
+	left: 0px;
+}
+
+/* line 156, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-5 {
+	top: 209px;
+	left: 150px;
+}
+
+/* line 157, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-6 {
+	top: 209px;
+	left: 300px;
+}
+
+/* line 159, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-7 {
+	top: 418px;
+	left: 0px;
+}
+
+/* line 160, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-8 {
+	top: 418px;
+	left: 150px;
+}
+
+/* line 161, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-9 {
+	top: 418px;
+	left: 300px;
+}
+
+/* line 163, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-10 {
+	top: 627px;
+	left: 0px;
+}
+
+/* line 164, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-11 {
+	top: 627px;
+	left: 150px;
+}
+
+/* line 165, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-12 {
+	top: 627px;
+	left: 300px;
+}
+
+/* line 167, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-13 {
+	top: 836px;
+	left: 0px;
+}
+
+/* line 168, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-14 {
+	top: 836px;
+	left: 150px;
+}
+
+/* line 169, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-15 {
+	top: 836px;
+	left: 300px;
+}
+
+/* line 171, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-16 {
+	top: 1045px;
+	left: 0px;
+}
+
+/* line 172, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-17 {
+	top: 1045px;
+	left: 150px;
+}
+
+/* line 173, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-18 {
+	top: 1045px;
+	left: 300px;
+}
+
+/* line 175, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-19 {
+	top: 1254px;
+	left: 0px;
+}
+
+/* line 176, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-20 {
+	top: 1254px;
+	left: 150px;
+}
+
+/* line 177, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-21 {
+	top: 1254px;
+	left: 300px;
+}
+
+/* line 179, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-22 {
+	top: 1463px;
+	left: 0px;
+}
+
+/* line 180, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-23 {
+	top: 1463px;
+	left: 150px;
+}
+
+/* line 181, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-24 {
+	top: 1463px;
+	left: 300px;
+}
+
+/* line 183, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-25 {
+	top: 1672px;
+	left: 0px;
+}
+
+/* line 184, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-26 {
+	top: 1672px;
+	left: 150px;
+}
+
+/* line 185, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-27 {
+	top: 1672px;
+	left: 300px;
+}
+
+/* line 187, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-28 {
+	top: 1881px;
+	left: 0px;
+}
+
+/* line 188, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-29 {
+	top: 1881px;
+	left: 150px;
+}
+
+/* line 189, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-30 {
+	top: 1881px;
+	left: 300px;
+}
+
+/* line 191, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-31 {
+	top: 2090px;
+	left: 0px;
+}
+
+/* line 192, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-32 {
+	top: 2090px;
+	left: 150px;
+}
+
+/* line 193, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-33 {
+	top: 2090px;
+	left: 300px;
+}
+
+/* line 195, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-34 {
+	top: 2299px;
+	left: 0px;
+}
+
+/* line 196, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-35 {
+	top: 2299px;
+	left: 150px;
+}
+
+/* line 197, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-36 {
+	top: 2299px;
+	left: 300px;
+}
+
+/* line 199, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-37 {
+	top: 2508px;
+	left: 0px;
+}
+
+/* line 200, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-38 {
+	top: 2508px;
+	left: 150px;
+}
+
+/* line 201, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-39 {
+	top: 2508px;
+	left: 300px;
+}
+
+/* line 203, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-40 {
+	top: 2717px;
+	left: 0px;
+}
+
+/* line 204, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-41 {
+	top: 2717px;
+	left: 150px;
+}
+
+/* line 205, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-42 {
+	top: 2717px;
+	left: 300px;
+}
+
+/* line 209, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li:active,
+.list-jenre-01 li:focus,
+.list-jenre-01 li:hover {
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+
+/* line 213, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li a {
+	display: block;
+}
+
+/* line 216, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li a img {
+	display: block;
+	width: 140px;
+	height: 199px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 226, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 {
+	width: 225px;
+}
+
+/* line 231, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01.love,
+.list-jenre-01.cry,
+.list-jenre-01.becomenumb,
+.list-jenre-01.think {
+	height: 836px;
+}
+
+/* line 235, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+/* .list-jenre-01.think {
+	height: 522px;
+} */
+
+/* line 239, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01.dangerous {
+	height: 731px;
+}
+
+/* line 244, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-1 {
+	top: 0px;
+	left: 0px;
+}
+
+/* line 245, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-2 {
+	top: 0px;
+	left: 75px;
+}
+
+/* line 246, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-3 {
+	top: 0px;
+	left: 150px;
+}
+
+/* line 248, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-4 {
+	top: 104.5px;
+	left: 0px;
+}
+
+/* line 249, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-5 {
+	top: 104.5px;
+	left: 75px;
+}
+
+/* line 250, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-6 {
+	top: 104.5px;
+	left: 150px;
+}
+
+/* line 252, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-7 {
+	top: 209px;
+	left: 0px;
+}
+
+/* line 253, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-8 {
+	top: 209px;
+	left: 75px;
+}
+
+/* line 254, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-9 {
+	top: 209px;
+	left: 150px;
+}
+
+/* line 256, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-10 {
+	top: 313.5px;
+	left: 0px;
+}
+
+/* line 257, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-11 {
+	top: 313.5px;
+	left: 75px;
+}
+
+/* line 258, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-12 {
+	top: 313.5px;
+	left: 150px;
+}
+
+/* line 260, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-13 {
+	top: 418px;
+	left: 0px;
+}
+
+/* line 261, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-14 {
+	top: 418px;
+	left: 75px;
+}
+
+/* line 262, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-15 {
+	top: 418px;
+	left: 150px;
+}
+
+/* line 264, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-16 {
+	top: 522.5px;
+	left: 0px;
+}
+
+/* line 265, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-17 {
+	top: 522.5px;
+	left: 75px;
+}
+
+/* line 266, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-18 {
+	top: 522.5px;
+	left: 150px;
+}
+
+/* line 268, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-19 {
+	top: 627px;
+	left: 0px;
+}
+
+/* line 269, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-20 {
+	top: 627px;
+	left: 75px;
+}
+
+/* line 270, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-21 {
+	top: 627px;
+	left: 150px;
+}
+
+/* line 272, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-22 {
+	top: 731.5px;
+	left: 0px;
+}
+
+/* line 273, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-23 {
+	top: 731.5px;
+	left: 75px;
+}
+
+/* line 274, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-24 {
+	top: 731.5px;
+	left: 150px;
+}
+
+/* line 276, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-25 {
+	top: 836px;
+	left: 0px;
+}
+
+/* line 277, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-26 {
+	top: 836px;
+	left: 75px;
+}
+
+/* line 278, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-27 {
+	top: 836px;
+	left: 150px;
+}
+
+/* line 280, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-28 {
+	top: 940.5px;
+	left: 0px;
+}
+
+/* line 281, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-29 {
+	top: 940.5px;
+	left: 75px;
+}
+
+/* line 282, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li.item-30 {
+	top: 940.5px;
+	left: 150px;
+}
+
+/* line 285, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-jenre-01 li a img {
+	display: block;
+	width: 70px;
+	height: 99px;
+}
+}
+
+/*  list-index-01
+--------------------------------------- */
+/* line 297, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+/*** mod 2016/06/30 長さ変更 ***/
+.list-index-01-container {
+	margin: 0 auto;
+	max-width: 700px;
+	padding-right: 16px;
+	padding-left: 16px;
+/*	height: 11333px; */
+	position: relative;
+}
+
+
+/* line 312, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+/* .list-index-01-container.display-1-none .item-43,
+.list-index-01-container.display-1-none .item-44,
+.list-index-01-container.display-1-none .item-45,
+.list-index-01-container.display-1-none .item-46,
+.list-index-01-container.display-1-none .item-47,
+.list-index-01-container.display-1-none .item-48,
+.list-index-01-container.display-1-none .item-49,
+.list-index-01-container.display-1-none .item-50,
+.list-index-01-container.display-1-none .item-51,
+.list-index-01-container.display-1-none .item-52,
+.list-index-01-container.display-1-none .item-53,
+.list-index-01-container.display-1-none .item-54,
+.list-index-01-container.display-1-none .item-55,
+.list-index-01-container.display-1-none .item-56,
+.list-index-01-container.display-1-none .item-57,
+.list-index-01-container.display-1-none .item-58,
+.list-index-01-container.display-1-none .item-59,
+.list-index-01-container.display-1-none .item-60,
+.list-index-01-container.display-1-none .item-61,
+.list-index-01-container.display-1-none .item-62,
+.list-index-01-container.display-1-none .item-63,
+.list-index-01-container.display-1-none .item-64,
+.list-index-01-container.display-1-none .item-65,
+.list-index-01-container.display-1-none .item-66,
+.list-index-01-container.display-1-none .item-67,
+.list-index-01-container.display-1-none .item-68,
+.list-index-01-container.display-1-none .item-69,
+.list-index-01-container.display-1-none .item-70,
+.list-index-01-container.display-1-none .item-71,
+.list-index-01-container.display-1-none .item-72,
+.list-index-01-container.display-1-none .item-73,
+.list-index-01-container.display-1-none .item-74,
+.list-index-01-container.display-1-none .item-75,
+.list-index-01-container.display-1-none .item-76,
+.list-index-01-container.display-1-none .item-77,
+.list-index-01-container.display-1-none .item-78,
+.list-index-01-container.display-1-none .item-79,
+.list-index-01-container.display-1-none .item-80,
+.list-index-01-container.display-1-none .item-81,
+.list-index-01-container.display-1-none .item-82,
+.list-index-01-container.display-1-none .item-83,
+.list-index-01-container.display-1-none .item-84,
+.list-index-01-container.display-1-none .item-85,
+.list-index-01-container.display-1-none .item-86,
+.list-index-01-container.display-1-none .item-87,
+.list-index-01-container.display-1-none .item-88,
+.list-index-01-container.display-1-none .item-89,
+.list-index-01-container.display-1-none .item-90,
+.list-index-01-container.display-1-none .item-91,
+.list-index-01-container.display-1-none .item-92,
+.list-index-01-container.display-1-none .item-93,
+.list-index-01-container.display-1-none .item-94,
+.list-index-01-container.display-1-none .item-95,
+.list-index-01-container.display-1-none .item-96,
+.list-index-01-container.display-1-none .item-97,
+.list-index-01-container.display-1-none .item-98,
+.list-index-01-container.display-1-none .item-99,
+.list-index-01-container.display-1-none .item-100,
+.list-index-01-container.display-1-none .item-101,
+.list-index-01-container.display-1-none .item-102,
+.list-index-01-container.display-1-none .item-103,
+.list-index-01-container.display-1-none .item-104,
+.list-index-01-container.display-1-none .item-105,
+.list-index-01-container.display-1-none .item-106,
+.list-index-01-container.display-1-none .item-107,
+.list-index-01-container.display-1-none .item-108,
+.list-index-01-container.display-1-none .item-109,
+.list-index-01-container.display-1-none .item-110,
+.list-index-01-container.display-1-none .item-111,
+.list-index-01-container.display-1-none .movie-7,
+.list-index-01-container.display-1-none .movie-8,
+.list-index-01-container.display-1-none .movie-9,
+.list-index-01-container.display-1-none .movie-10,
+.list-index-01-container.display-1-none .movie-11,
+.list-index-01-container.display-1-none .movie-12,
+.list-index-01-container.display-1-none .movie-13,
+.list-index-01-container.display-1-none .movie-14,
+.list-index-01-container.display-1-none .movie-15 {
+	display: none;
+} */
+
+/* line 318, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+/* .list-index-01-container.display-2-none .item-85,
+.list-index-01-container.display-2-none .item-86,
+.list-index-01-container.display-2-none .item-87,
+.list-index-01-container.display-2-none .item-88,
+.list-index-01-container.display-2-none .item-89,
+.list-index-01-container.display-2-none .item-90,
+.list-index-01-container.display-2-none .item-91,
+.list-index-01-container.display-2-none .item-92,
+.list-index-01-container.display-2-none .item-93,
+.list-index-01-container.display-2-none .item-94,
+.list-index-01-container.display-2-none .item-95,
+.list-index-01-container.display-2-none .item-96,
+.list-index-01-container.display-2-none .item-97,
+.list-index-01-container.display-2-none .item-98,
+.list-index-01-container.display-2-none .item-99,
+.list-index-01-container.display-2-none .item-100,
+.list-index-01-container.display-2-none .item-101,
+.list-index-01-container.display-2-none .item-102,
+.list-index-01-container.display-2-none .item-103,
+.list-index-01-container.display-2-none .item-104,
+.list-index-01-container.display-2-none .item-105,
+.list-index-01-container.display-2-none .item-106,
+.list-index-01-container.display-2-none .item-107,
+.list-index-01-container.display-2-none .item-108,
+.list-index-01-container.display-2-none .item-109,
+.list-index-01-container.display-2-none .item-110,
+.list-index-01-container.display-2-none .item-111,
+.list-index-01-container.display-2-none .movie-13,
+.list-index-01-container.display-2-none .movie-14,
+.list-index-01-container.display-2-none .movie-15 {
+	display: none;
+} */
+
+/* line 323, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px 10px;
+	position: relative;
+	z-index: 1;
+}
+
+/* line 328, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li {
+	width: calc(25% - 10px);
+	-webkit-box-shadow: 1px 1px 2px #666666;
+	-moz-box-shadow: 1px 1px 2px #666666;
+	box-shadow: 1px 1px 2px #666666;
+}
+
+/* line 334, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li:active,
+.list-index-01-container .list-index-01 li:focus,
+.list-index-01-container .list-index-01 li:hover {
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+
+/* line 338, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li a {
+	display: block;
+}
+
+/* line 341, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li a img {
+	display: block;
+	width: 100%;
+}
+
+.top-qunta {
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.movie img {
+	width: 100%;
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+
+@media screen and (max-width: 660px) {
+	.top-qunta img {
+		width: 72px!important;
+		height: auto;
+	}
+}
+
+/* line 536, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie {
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.list-index-01-container .movie-1 {
+	width: 143px;
+	position: absolute;
+	top: 210px;
+	z-index: 1;
+}
+
+/* line 543, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-2 {
+	width: 164px;
+	position: absolute;
+	top: 1210px;
+	z-index: 1;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-3 {
+	width: 145px;
+	position: absolute;
+	top: 2420px;
+	z-index: 1;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-4 {
+	width: 164px;
+	position: absolute;
+	top: 3395px;
+	z-index: 1;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-5 {
+	width: 145px;
+	position: absolute;
+	top: 4595px;
+	z-index: 1;
+	display:none;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-6 {
+	width: 164px;
+	position: absolute;
+	top: 5565px;
+	z-index: 1;
+	display:none;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-7 {
+	width: 145px;
+	position: absolute;
+	top: 6780px;
+	z-index: 1;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-8 {
+	width: 164px;
+	position: absolute;
+	top: 7747px;
+	z-index: 1;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-9 {
+	width: 145px;
+	position: absolute;
+	top: 8975px;
+	z-index: 1;
+}
+
+/* line 563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-10 {
+	width: 164px;
+	position: absolute;
+	top: 9941px;
+}
+
+/* line 781, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .door-01 {
+	position: absolute;
+	top: 155px;
+	right: -34px;
+}
+
+/* line 782, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .door-02 {
+	position: absolute;
+	top: 2320px;
+	left: -29px;
+}
+
+/* line 783, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .door-03 {
+	position: absolute;
+	top: 4577px;
+	right: -32px;
+}
+
+/* line 784, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .door-04 {
+	position: absolute;
+	top: 6745px;
+	left: -29px;
+}
+
+/* line 785, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .door-05 {
+	position: absolute;
+	top: 8967px;
+	right: -32px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 789, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container {
+	width: 270px;
+}
+
+.list-index-01-container .list-index-01 {
+	margin-top: 40px;
+	gap: 24px 24px;
+}
+
+.list-index-01-container .list-index-01 li {
+	width: calc(50% - 12px);
+}
+
+.list-index-01-container .movie-1,
+.list-index-01-container .movie-2,
+.list-index-01-container .movie-3,
+.list-index-01-container .movie-4,
+.list-index-01-container .movie-5,
+.list-index-01-container .movie-6,
+.list-index-01-container .movie-7,
+.list-index-01-container .movie-8,
+.list-index-01-container .movie-9,
+.list-index-01-container .movie-10 {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+
+.list-index-01-container .movie:nth-of-type(odd) img {
+	width: 73px!important;
+	height: auto;
+} 
+
+.list-index-01-container .movie:nth-of-type(even) img {
+	width: 72px!important;
+	height: auto;
+} 
+
+.list-index-01-container .movie-1 img,
+.list-index-01-container .movie-2 img,
+.list-index-01-container .movie-3 img,
+.list-index-01-container .movie-4 img,
+.list-index-01-container .movie-5 img,
+.list-index-01-container .movie-6 img,
+.list-index-01-container .movie-7 img,
+.list-index-01-container .movie-8 img,
+.list-index-01-container .movie-9 img,
+.list-index-01-container .movie-10 img{
+	width: 100%;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.list-index-01-container .movie-1 img {
+	margin-top: 36px;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-1 {
+	position: absolute;
+	top: 100.5px;
+	display: flex;
+	justify-content: center;
+}
+
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-2 {
+	position: absolute;
+	top: 575.5px;
+	display: flex;
+	justify-content: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-3 {
+	position: absolute;
+	top: 1143.5px;
+	display: flex;
+	justify-content: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-4 {
+	position: absolute;
+	top: 1601.5px;
+	display: flex;
+	justify-content: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-5 {
+	position: absolute;
+	top: 2306.5px;
+	text-align: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-6 {
+	position: absolute;
+	top: 2765.5px;
+	display: flex!important;
+	justify-content: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-7 {
+	position: absolute;
+	top: 3338.5px;
+	display: flex!important;
+	justify-content: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-8 {
+	position: absolute;
+	top: 3900.5px;
+	display: flex!important;
+	justify-content: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-9 {
+	position: absolute;
+	top: 4370.5px;
+	text-align: center;
+}
+
+/* line 840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .movie-10 {
+	position: absolute;
+	top: 4823.5px;
+	display: flex!important;
+	justify-content: center;
+}
+
+/* line 991, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-1 {
+	top: 0px;
+	left: 0px;
+}
+
+/* line 992, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-2 {
+	top: 0px;
+	left: 75px;
+}
+
+/* line 993, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-3 {
+	top: 0px;
+	left: 150px;
+}
+
+/* line 995, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-4 {
+	top: 255.5px;
+	left: 0px;
+}
+
+/* line 996, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-5 {
+	top: 255.5px;
+	left: 75px;
+}
+
+/* line 997, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-6 {
+	top: 255.5px;
+	left: 150px;
+}
+
+/* line 999, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-7 {
+	top: 359.5px;
+	left: 0px;
+}
+
+/* line 1000, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-8 {
+	top: 359.5px;
+	left: 75px;
+}
+
+/* line 1001, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-9 {
+	top: 359.5px;
+	left: 150px;
+}
+
+/* line 1003, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-10 {
+	top: 464px;
+	left: 0px;
+}
+
+/* line 1004, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-11 {
+	top: 464px;
+	left: 75px;
+}
+
+/* line 1005, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-12 {
+	top: 464px;
+	left: 150px;
+}
+
+/* line 1007, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-13 {
+	top: 719.5px;
+	left: 0px;
+}
+
+/* line 1008, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-14 {
+	top: 719.5px;
+	left: 75px;
+}
+
+/* line 1009, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-15 {
+	top: 719.5px;
+	left: 150px;
+}
+
+/* line 1011, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-16 {
+	top: 823.5px;
+	left: 0px;
+}
+
+/* line 1012, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-17 {
+	top: 823.5px;
+	left: 75px;
+}
+
+/* line 1013, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-18 {
+	top: 823.5px;
+	left: 150px;
+}
+
+/* line 1015, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-19 {
+	top: 928px;
+	left: 0px;
+}
+
+/* line 1016, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-20 {
+	top: 928px;
+	left: 75px;
+}
+
+/* line 1017, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-21 {
+	top: 928px;
+	left: 150px;
+}
+
+/* line 1019, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-22 {
+	top: 1031.5px;
+	left: 0px;
+}
+
+/* line 1020, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-23 {
+	top: 1031.5px;
+	left: 75px;
+}
+
+/* line 1021, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-24 {
+	top: 1031.5px;
+	left: 150px;
+}
+
+/* line 1023, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-25 {
+	top: 1285px;
+	left: 0px;
+}
+
+/* line 1024, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-26 {
+	top: 1285px;
+	left: 75px;
+}
+
+/* line 1025, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-27 {
+	top: 1285px;
+	left: 150px;
+}
+
+/* line 1027, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-28 {
+	top: 1389px;
+	left: 0px;
+}
+
+/* line 1028, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-29 {
+	top: 1389px;
+	left: 75px;
+}
+
+/* line 1029, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-30 {
+	top: 1389px;
+	left: 150px;
+}
+
+/* line 1031, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-31 {
+	top: 1493.5px;
+	left: 0px;
+}
+
+/* line 1032, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-32 {
+	top: 1493.5px;
+	left: 75px;
+}
+
+/* line 1033, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-33 {
+	top: 1493.5px;
+	left: 150px;
+}
+
+/* line 1035, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-34 {
+	top: 1752.5px;
+	left: 0px;
+}
+
+/* line 1036, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-35 {
+	top: 1752.5px;
+	left: 75px;
+}
+
+/* line 1037, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-36 {
+	top: 1752.5px;
+	left: 150px;
+}
+
+/* line 1039, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-37 {
+	top: 1856.5px;
+	left: 0px;
+}
+
+/* line 1040, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-38 {
+	top: 1856.5px;
+	left: 75px;
+}
+
+/* line 1041, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-39 {
+	top: 1856.5px;
+	left: 150px;
+}
+
+/* line 1043, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-40 {
+	top: 1961px;
+	left: 0px;
+}
+
+/* line 1044, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-41 {
+	top: 1961px;
+	left: 75px;
+}
+
+/* line 1045, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-42 {
+	top: 1961px;
+	left: 150px;
+}
+
+/* line 1047, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-43 {
+	top: 2195.5px;
+	left: 0px;
+}
+
+/* line 1048, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-44 {
+	top: 2195.5px;
+	left: 75px;
+}
+
+/* line 1049, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-45 {
+	top: 2195.5px;
+	left: 150px;
+}
+
+/* line 1051, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-46 {
+	top: 2451px;
+	left: 0px;
+}
+
+/* line 1052, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-47 {
+	top: 2451px;
+	left: 75px;
+}
+
+/* line 1053, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-48 {
+	top: 2451px;
+	left: 150px;
+}
+
+/* line 1055, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-49 {
+	top: 2555.5px;
+	left: 0px;
+}
+
+/* line 1056, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-50 {
+	top: 2555.5px;
+	left: 75px;
+}
+
+/* line 1057, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-51 {
+	top: 2555.5px;
+	left: 150px;
+}
+
+/* line 1059, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-52 {
+	top: 2660px;
+	left: 0px;
+}
+
+/* line 1060, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-53 {
+	top: 2660px;
+	left: 75px;
+}
+
+/* line 1061, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-54 {
+	top: 2660px;
+	left: 150px;
+}
+
+/* line 1063, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-55 {
+	top: 2910.5px;
+	left: 0px;
+}
+
+/* line 1064, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-56 {
+	top: 2910.5px;
+	left: 75px;
+}
+
+/* line 1065, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-57 {
+	top: 2910.5px;
+	left: 150px;
+}
+
+/* line 1067, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-58 {
+	top: 3015px;
+	left: 0px;
+}
+
+/* line 1068, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-59 {
+	top: 3015px;
+	left: 75px;
+}
+
+/* line 1069, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-60 {
+	top: 3015px;
+	left: 150px;
+}
+
+/* line 1071, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-61 {
+	top: 3119.5px;
+	left: 0px;
+}
+
+/* line 1072, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-62 {
+	top: 3119.5px;
+	left: 75px;
+}
+
+/* line 1073, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-63 {
+	top: 3119.5px;
+	left: 150px;
+}
+
+/* line 1075, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-64 {
+	top: 3224px;
+	left: 0px;
+}
+
+/* line 1076, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-65 {
+	top: 3224px;
+	left: 75px;
+}
+
+/* line 1077, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-66 {
+	top: 3224px;
+	left: 150px;
+}
+
+/* line 1079, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-67 {
+	top: 3479.5px;
+	left: 0px;
+}
+
+/* line 1080, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-68 {
+	top: 3479.5px;
+	left: 75px;
+}
+
+/* line 1081, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-69 {
+	top: 3479.5px;
+	left: 150px;
+}
+
+/* line 1083, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-70 {
+	top: 3584px;
+	left: 0px;
+}
+
+/* line 1084, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-71 {
+	top: 3584px;
+	left: 75px;
+}
+
+/* line 1085, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-72 {
+	top: 3584px;
+	left: 150px;
+}
+
+/* line 1087, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-73 {
+	top: 3688.5px;
+	left: 0px;
+}
+
+/* line 1088, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-74 {
+	top: 3688.5px;
+	left: 75px;
+}
+
+/* line 1089, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-75 {
+	top: 3688.5px;
+	left: 150px;
+}
+
+/* line 1091, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-76 {
+	top: 3792.5px;
+	left: 0px;
+}
+
+/* line 1092, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-77 {
+	top: 3792.5px;
+	left: 75px;
+}
+
+/* line 1093, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-78 {
+	top: 3792.5px;
+	left: 150px;
+}
+
+/* line 1095, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-79 {
+	top: 4046px;
+	left: 0px;
+}
+
+/* line 1096, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-80 {
+	top: 4046px;
+	left: 75px;
+}
+
+/* line 1097, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-81 {
+	top: 4046px;
+	left: 150px;
+}
+
+/* line 1099, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-82 {
+	top: 4148.5px;
+	left: 0px;
+}
+
+/* line 1100, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-83 {
+	top: 4148.5px;
+	left: 75px;
+}
+
+/* line 1101, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-84 {
+	top: 4148.5px;
+	left: 150px;
+}
+
+/* line 1103, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-85 {
+	top: 4253px;
+	left: 0px;
+}
+
+/* line 1104, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-86 {
+	top: 4253px;
+	left: 75px;
+}
+
+/* line 1105, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-87 {
+	top: 4253px;
+	left: 150px;
+}
+
+/* line 1107, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-88 {
+	top: 4504.5px;
+	left: 0px;
+}
+
+/* line 1108, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-89 {
+	top: 4504.5px;
+	left: 75px;
+}
+
+/* line 1109, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-90 {
+	top: 4504.5px;
+	left: 150px;
+}
+
+/* line 1111, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-91 {
+	top: 4609px;
+	left: 0px;
+}
+
+/* line 1112, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-92 {
+	top: 4609px;
+	left: 75px;
+}
+
+/* line 1113, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-93 {
+	top: 4609px;
+	left: 150px;
+}
+
+/* line 1115, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-94 {
+	top: 4713.5px;
+	left: 0px;
+}
+
+/* line 1116, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-95 {
+	top: 4713.5px;
+	left: 75px;
+}
+
+/* line 1117, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-96 {
+	top: 4713.5px;
+	left: 150px;
+}
+
+/* line 1119, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-97 {
+	top: 4968px;
+	left: 0px;
+}
+
+/* line 1120, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-98 {
+	top: 4968px;
+	left: 75px;
+}
+
+/* line 1121, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-99 {
+	top: 4968px;
+	left: 150px;
+}
+
+/* line 1123, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-100 {
+	top: 5072.5px;
+	left: 0px;
+}
+
+/* line 1124, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-101 {
+	top: 5072.5px;
+	left: 75px;
+}
+
+/* line 1125, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-102 {
+	top: 5072.5px;
+	left: 150px;
+}
+
+/* line 1127, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-103 {
+	top: 5177px;
+	left: 0px;
+}
+
+/* line 1128, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-104 {
+	top: 5177px;
+	left: 75px;
+}
+
+/* line 1129, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-105 {
+	top: 5177px;
+	left: 150px;
+}
+
+/* line 1131, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-106 {
+	top: 5381.5px;
+	left: 0px;
+}
+
+/* line 1132, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-107 {
+	top: 5381.5px;
+	left: 75px;
+}
+
+/* line 1133, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-108 {
+	top: 5381.5px;
+	left: 150px;
+}
+
+/* line 1135, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-109 {
+	top: 5726px;
+	left: 0px;
+}
+
+/* line 1136, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-110 {
+	top: 5726px;
+	left: 75px;
+}
+
+/* line 1137, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-index-01-container .list-index-01 li.item-111 {
+	top: 5726px;
+	left: 150px;
+}
+}
+
+/*  list-social-02
+--------------------------------------- */
+/* line 1145, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02-container {
+	margin: 0 auto 50px;
+	padding: 102px 0 32px;
+	width: 342px;
+	background: url("/assets/img/bg/bg_list-social-01.png") no-repeat 0 0;
+}
+
+/* line 1151, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02-container .list-social-02 {
+	padding: 0;
+}
+
+/* line 1157, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02 {
+	padding: 20px 0 50px;
+	text-align: center;
+}
+
+/* line 1161, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02 li {
+	padding: 0 15px;
+	display: inline;
+}
+
+/* line 1165, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02 li img {
+	width: 73px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1172, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02-container {
+	margin-bottom: 25px;
+	padding: 51px 0 16px;
+	width: 171px;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+
+/* line 1178, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02-container .list-social-02 {
+	padding: 0;
+}
+
+/* line 1183, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02 {
+	padding: 10px 0 25px;
+}
+
+/* line 1186, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02 li {
+	padding: 0 8px;
+}
+
+/* line 1189, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.list-social-02 li img {
+	width: 39px;
+}
+}
+
+/* -----------------------------------------------------
+  Layout
+----------------------------------------------------- */
+/*  lyt-image-01
+--------------------------------------- */
+/* line 1203, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-image-01 {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+.lyt-image-01 img {
+	width: 145px;
+}
+
+@media screen and (max-width: 660px) {
+	.lyt-image-01 {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+	.lyt-image-01 img {
+		width: 73px;
+		height: auto;
+	}
+}
+
+/*  lyt-movie-01
+--------------------------------------- */
+/* line 1220, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-movie-01 {
+	margin: 0 auto 30px;
+	width: 440px;
+	height: 247px;
+	background: url("/assets/img/img/img_loader_01.gif") no-repeat 48% 90px;
+}
+
+/* line 1226, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-movie-01 iframe {
+	width: 440px;
+	height: 247px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1233, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-movie-01 {
+	width: 220px;
+	height: 137px;
+	background-position: 48% 50px;
+	-webkit-background-size: 33px 33px;
+	-moz-background-size: 33px 33px;
+	-o-background-size: 33px 33px;
+	background-size: 33px 33px;
+}
+
+/* line 1239, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-movie-01 iframe {
+	width: 220px;
+	height: 137px;
+}
+}
+
+/*  lyt-opening-01
+--------------------------------------- */
+/* line 1248, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 {
+	background-color: #000B53;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* line 1253, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .lyt-opening-01-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* line 1259, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .loader,
+.lyt-opening-01 .loader-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 64px;
+	height: 64px;
+}
+
+@media screen and (max-width: 767px) {
+	.lyt-opening-01 .loader,
+	.lyt-opening-01 .loader-top {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.lyt-opening-01 .loader {
+	display: none;
+	z-index: 2;
+}
+
+.lyt-opening-01 .loader-top {
+	display: block;
+	z-index: 1;
+}
+
+.lyt-opening-01 .loader img,
+.lyt-opening-01 .loader-top img {
+	width: 100%;
+}
+
+/* line 1268, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 750px;
+}
+
+/* line 1268, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .enter .inner {
+	position: fixed;
+	z-index: 1;
+	background-image: url(/assets/img/img/img_op_enterbg_01_pc.gif);
+	background-size: cover;
+	background-position-x: center;
+	/* background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	animation: enterBgChange 2s linear infinite; */
+}
+@keyframes enterBgChange{
+	0% {
+		background-image: url(/assets/img/img/img_op_enterbg_01.png);
+	}
+	49% {
+		background-image: url(/assets/img/img/img_op_enterbg_01.png);
+	}
+	50% {
+		background-image: url(/assets/img/img/img_op_enterbg_02.png);
+	}
+	99% {
+		background-image: url(/assets/img/img/img_op_enterbg_02.png);
+	}
+	100% {
+		background-image: url(/assets/img/img/img_op_enterbg_01.png);
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.lyt-opening-01 .enter .inner {
+		background-image: url(/assets/img/img/bg_body_sp.png);
+		background-color: #FFE900;
+		background-size: 100% auto; 
+		background-repeat: no-repeat;
+		background-position-x: center;
+		word-wrap: break-word;
+		position: relative;
+	}
+}
+
+@media screen and (max-height: 1100px) {
+	.enter:before {
+		max-height: 100%;
+	}
+}
+
+/*
+#container:after {
+	position: fixed;
+  content: "";
+  background: url("/assets/img/teaser/bg_body_right.png") no-repeat;
+  background-position: right bottom;
+  width: 320px;
+  height: 100%;
+  max-height: 685px;
+  bottom: 0;
+  right: 0;
+}*/
+
+/* line 1278, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .inner .img {
+	position: absolute;
+}
+
+/* line 1288, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background-color: #fceb00;
+}
+
+/* line 1296, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner {
+	margin-top: -97px;
+	margin-left: -197px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 394px;
+	height: 194px;
+}
+
+/* line 1305, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .title {
+	margin-bottom: 30px;
+}
+
+/* line 1309, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .select-list {
+	text-align: center;
+}
+
+/* line 1312, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .select-list li {
+	padding: 0 20px;
+	display: inline;
+	cursor: pointer;
+}
+
+/* line 1317, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .select-list li img {
+	width: 101px;
+}
+
+/* line 1325, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .enter {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background-color: #000B53;
+	z-index: 999;
+}
+
+/* line 1334, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+/*.lyt-opening-01 .enter .inner .img {
+	margin-top: -286.5px;
+	margin-left: -209px;
+	width: 418px;
+	height: 573px;
+	cursor: pointer;
+}*/
+
+.enter-imageItems {
+	position: relative;
+	height: 100%;
+}
+
+.lyt-opening-01 .enter .inner {
+	min-height: 0;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img01 {
+	width: 100%;
+	height: 28.3%;
+	top: 6.4%;
+	left: 0;
+	right: 0;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 4;
+	text-align: center;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img01 img {
+	width: auto;
+	height: 100%;
+	margin-left: 65px;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img02 {
+	width: 100%;
+	height: 40%;
+	bottom: 0;
+	top: auto;
+	left: 20px;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 3;
+	text-align: center;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img02 .img_inner {
+	position: relative;
+	display: inline-block;
+	width: auto;
+	height: 100%;
+	max-width: 450px;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img02 img {
+	width: auto;
+	height: 100%;
+	margin-right: 0.4%;
+	max-height: 337px;
+}
+
+.lyt-opening-01 .enter .inner img.img.op_img03 {
+	width: auto;
+	height: 19%;
+	top: 0%;
+	left: 0%;
+	right: auto;
+	margin-right: 0;
+	z-index: 4;
+}
+.lyt-opening-01 .enter .inner img.img.op_img03-02 {
+	top: 47%;
+	left: 100%;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img04{
+	display: block;
+	height: 5.6%;
+	top: 44%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img04 img{
+	width: auto;
+	height: 100%;
+	margin-right: -0.5%;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img05{
+	width: 392px;
+	height: 456px;
+	bottom: -5px;
+	/* right: 72.6%; */
+	left: -20px;
+	z-index: 2;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img05 img{
+	width: 100%;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img06{
+	width: 536px;
+	height: 342px;
+	bottom: -4px;
+	/* left: 69.5%; */
+	right: -120px;
+	z-index: 2;
+}
+
+.lyt-opening-01 .enter .inner .img.op_img06 img{
+	width: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+	.enter-imageItems {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img01 {
+		top: auto;
+		max-width: 194px;
+		height: auto;
+		position: relative;
+		display: block;
+		margin-top: 4%;
+		left: 15px;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img01 img {
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img02 {
+		max-width: 320px;
+		height: auto;
+		top: auto;
+		bottom: 50px;
+		margin-top: 0;
+		position: relative;
+		display: block;
+		order: 3;
+		flex-grow: 1;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img02 .img_inner {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: auto;
+		width: 316px;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img02 img {
+		width: 100%;
+		height: auto;
+	}
+
+	.lyt-opening-01 .enter .inner img.img.op_img03 {
+		max-width: 70px;
+		top: 20px;
+		bottom: auto;
+		left: 8px;
+		margin: 0;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img04 {
+		position: relative;
+		top: 2.6%;
+		max-width: 160px;
+		height: auto;
+		margin-top: 0;
+		padding-right: 20px;
+		padding-left: 20px;
+		order: 2;
+		z-index: 3;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img04 img {
+		width: 100%;
+		height: auto;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img05{
+		width: 266px;
+		height: 310px;
+		top: auto;
+		bottom: -1px;
+		left: -51px;
+		margin-right: 0;
+		text-align: right;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img06{
+		width: 364px;
+		height: 232px;
+		top: auto;
+		bottom: -1px;
+		right: -87px;
+		margin-left: 0;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 767px) and (max-height: 450px) {
+	.lyt-opening-01 .enter .inner .img.op_img01 {
+		max-width: 140px;
+		top: 8px;
+		margin-top: 0;
+	}
+
+	.lyt-opening-01 .enter .inner img.img.op_img03 {
+		bottom: 148px;
+		margin: 0 3px 0 0;
+	}
+
+	.lyt-opening-01 .enter .inner .img.op_img04 {
+		max-width: 100px;
+		bottom: 0;
+		margin-top: 16px;
+	}
+	
+}
+
+
+/* line 1343, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sp-title {
+	display: none;
+}
+
+/* line 1352, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-01,
+.lyt-opening-01 .page-02,
+.lyt-opening-01 .page-03,
+.lyt-opening-01 .page-04,
+.lyt-opening-01 .page-05,
+.lyt-opening-01 .page-06 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background: url("/assets/img/teaser/bg_body_top.png") repeat-x 0 0, url("/assets/img/teaser/bg_body_btm.png") repeat-x 0 100%, url("/assets/img/teaser/bg_body_left.png") repeat-y 0 0, url("/assets/img/teaser/bg_body_right.png") repeat-y 100% 0;
+}
+
+/* line 1358, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-01 {
+	z-index: 2;
+	background-color: #e96081;
+}
+
+/* line 1359, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-02 {
+	z-index: 3;
+	background-color: #004097;
+}
+
+/* line 1360, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-03 {
+	z-index: 4;
+	background-color: #f08300;
+}
+
+/* line 1361, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-04 {
+	z-index: 5;
+	background-color: #006b32;
+}
+
+/* line 1362, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-05 {
+	z-index: 6;
+	background-color: #46b2e7;
+}
+
+/* line 1363, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-06 {
+	z-index: 7;
+	background-color: #fceb00;
+}
+
+/* line 1363, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-06 .img {
+	margin-top: -194px;
+	margin-left: -275px;
+	width: 551px;
+}
+
+/* line 1366, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under {
+	position: absolute;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background-color: #fceb00;
+}
+
+/* line 1374, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner {
+	margin-top: -97px;
+	margin-left: -197px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 394px;
+	height: 194px;
+}
+
+/* line 1383, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .title {
+	margin-bottom: 30px;
+}
+
+/* line 1387, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .select-list {
+	text-align: center;
+}
+
+/* line 1390, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .select-list li {
+	padding: 0 20px;
+	display: inline;
+	cursor: pointer;
+}
+
+/* line 1395, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .select-list li img {
+	width: 101px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1409, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .loader img,
+.lyt-opening-01 .loader-top img {
+	width: 33px;
+}
+
+/* line 1414, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .inner {
+	min-height: inherit;
+	/*background: #000B53;*/
+}
+
+/* line 1352, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-01,
+.lyt-opening-01 .page-02,
+.lyt-opening-01 .page-03,
+.lyt-opening-01 .page-04,
+.lyt-opening-01 .page-05,
+.lyt-opening-01 .page-06 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background: url("/assets/img/teaser/bg_body_top.png") repeat-x 0 0, url("/assets/img/teaser/bg_body_btm.png") repeat-x 0 100%, url("/assets/img/teaser/bg_body_left.png") repeat-y 0 0, url("/assets/img/teaser/bg_body_right.png") repeat-y 100% 0;
+}
+
+/* line 1358, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-01 .inner {
+	z-index: 2;
+	background-color: #e96081;
+}
+
+/* line 1359, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-02 .inner {
+	z-index: 3;
+	background-color: #004097;
+}
+
+/* line 1360, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-03 .inner {
+	z-index: 4;
+	background-color: #f08300;
+}
+
+/* line 1361, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-04 .inner {
+	z-index: 5;
+	background-color: #006b32;
+}
+
+/* line 1362, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-05 .inner {
+	z-index: 6;
+	background-color: #46b2e7;
+}
+
+/* line 1363, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-06 .inner {
+	z-index: 7;
+	background-color: #fceb00;
+}
+
+/* line 1363, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-06 .img {
+	margin-top: -194px;
+	margin-left: -275px;
+	width: 551px;
+}
+
+/* line 1421, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .inner .img {
+	margin-top: -30%;
+	/*margin-left: -38%;*/
+	position: absolute;
+	top: inherit;
+	top: 50%;
+	/*left: 50%;*/
+	width: 76%;
+	height: auto;
+}
+
+/* line 1433, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner {
+	margin-top: -48px;
+	margin-left: -98px;
+	width: 197px;
+	height: 97px;
+}
+
+/* line 1439, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .title {
+	margin-bottom: 15px;
+}
+
+/* line 1442, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .title img {
+	width: 197px;
+}
+
+/* line 1448, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .select-list li {
+	padding: 0 10px;
+}
+
+/* line 1451, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sound-select .sound-select-inner .select-list li img {
+	width: 72px;
+}
+
+/* line 1461, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+
+.lyt-opening-01 .enter .inner .img {
+	margin-top: -50%;
+	/*margin-left: -38%;*/
+	width: 76%;
+	height: auto;
+	position: absolute;
+	top: inherit;
+	top: 50%;
+	/*left: 50%;*/
+}
+
+/* line 1469, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .sp-title {
+	margin: 0 auto;
+	padding-top: 40px;
+	display: block;
+	width: 70%;
+}
+
+/* line 1477, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-opening-01 .page-06 .img {
+	margin-top: -97px;
+	margin-left: -137px;
+	top: 50%;
+	bottom: inherit;
+	width: 275px;
+}
+
+/* line 1488, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner {
+	margin-top: -48px;
+	margin-left: -98px;
+	width: 197px;
+	height: 97px;
+}
+
+/* line 1494, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .title {
+	margin-bottom: 15px;
+}
+
+/* line 1497, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .title img {
+	width: 197px;
+}
+
+/* line 1503, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .select-list li {
+	padding: 0 10px;
+}
+
+/* line 1506, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.sound-select-under .sound-select-inner .select-list li img {
+	width: 72px;
+}
+}
+
+/*  lyt-detail-01
+--------------------------------------- */
+/* line 1517, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container {
+	margin: 0 auto;
+	position: relative;
+	max-width: 770px;
+	min-height: 500px;
+	background: url("/assets/img/img/img_loader_01.gif") no-repeat 48% 320px;
+}
+
+.lyt-detail-01-container .nav-back {
+	width: 198px;
+}
+
+.lyt-detail-01-container .nav-back img {
+	width: 100%;
+}
+
+/* line 1524, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 {
+	position: relative;
+	display: none;
+}
+
+/* line 1528, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .prev {
+	position: absolute;
+	top: 450px;
+	left: 78px;
+	cursor: pointer;
+}
+
+/* line 1535, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .next {
+	position: absolute;
+	top: 450px;
+	right: 78px;
+	cursor: pointer;
+}
+
+/* line 1542, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .book-image {
+	max-width: 614px;
+	margin:  0 auto 40px;
+	text-align: center;
+}
+
+.lyt-detail-01-container .lyt-detail-01 .book-image img {
+	-webkit-box-shadow: 1px 1px 2px #666666;
+	-moz-box-shadow: 1px 1px 2px #666666;
+	box-shadow: 1px 1px 2px #666666;
+}
+
+/* line 1547, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .lyt-detail-01-inner {
+	margin: 0 auto;
+	max-width: 770px;
+	padding-right: 16px;
+	padding-left: 16px;
+	/* background: #FFEA00; */
+}
+
+/* line 1552, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .title {
+	margin-bottom: 10px;
+	font-size: 158%;
+}
+
+/* line 1563, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .description {
+	margin-bottom: 40px;
+	line-height: 1.6;
+}
+
+/* line 1568, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list {
+	padding-bottom: 25px;
+}
+
+/* line 1572, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li {
+	padding-bottom: 18px;
+	width: 100%;
+}
+
+/* line 1579, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li dl dt {
+	float: left;
+	width: 92px;
+}
+
+/* line 1584, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li dl dd {
+	padding-top: 6px;
+	padding-right: 1em;
+	overflow: hidden;
+}
+
+/* line 1593, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .btn-list {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+}
+
+/* line 1600, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .btn-list li.first {
+	margin-right: 20px;
+}
+
+/* line 1604, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .btn-list li .disabled {
+	cursor: default;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1613, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container {
+	width: 307px;
+	background-position: 48% 180px;
+	-webkit-background-size: 33px 33px;
+	-moz-background-size: 33px 33px;
+	-o-background-size: 33px 33px;
+	background-size: 33px 33px;
+}
+
+/* line 1619, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .prev {
+	top: 225px;
+	left: 26px;
+}
+
+/* line 1623, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .prev img {
+	width: 35px;
+}
+
+/* line 1628, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .next {
+	top: 225px;
+	right: 26px;
+}
+
+/* line 1632, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .next img {
+	width: 35px;
+}
+
+/* line 1637, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .book-image {
+	margin-bottom: 20px;
+}
+
+/* line 1640, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .book-image img {
+	width: 161px;
+}
+
+/* line 1645, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .lyt-detail-01-inner {
+	width: 270px;
+}
+
+/* line 1649, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .title {
+	font-size: 115%;
+}
+
+/* line 1653, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .description {
+	margin-bottom: 20px;
+	font-size: 86%;
+}
+
+/* line 1658, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list {
+	padding-bottom: 25px;
+}
+
+/* line 1661, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li {
+	padding-bottom: 9px;
+}
+
+/* line 1665, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li dl dt {
+	float: left;
+	width: 60px;
+}
+
+/* line 1669, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li dl dt img {
+	width: 50px;
+}
+
+/* line 1674, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .data-list li dl dd {
+	padding-top: 1px;
+	font-size: 86%;
+}
+
+/* line 1682, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .btn-list {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+/* line 1686, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .btn-list li img {
+	width: 105px;
+}
+
+/* line 1690, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .btn-list li.first {
+	margin-right: 10px;
+}
+
+/* line 1697, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.lyt-detail-01-container .lyt-detail-01 .nav-back img {
+	width: 100px;
+}
+}
+
+/* -----------------------------------------------------
+  Navigation
+----------------------------------------------------- */
+/*  nav-btn-01
+--------------------------------------- */
+/* line 1713, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-01 li {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1721, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-01 li {
+	padding-bottom: 10px;
+}
+
+/* line 1724, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-01 li img {
+	width: 220px;
+}
+}
+
+/*  nav-btn-02
+--------------------------------------- */
+/* line 1733, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-02 {
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1739, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-02 {
+	padding-bottom: 15px;
+}
+
+/* line 1742, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-02 img {
+	width: 190px;
+}
+}
+
+/*  nav-btn-03
+--------------------------------------- */
+/* line 1750, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-03 {
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1756, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-03 {
+	padding-bottom: 25px;
+}
+
+/* line 1759, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-btn-03 img {
+	width: 220px;
+}
+}
+
+/*  nav-more-01
+--------------------------------------- */
+/* line 1767, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-more-01 {
+	margin: 0 auto;
+	padding: 70px 0 0;
+	width: 380px;
+	text-align: center;
+}
+
+/* line 1773, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-more-01 img {
+	width: 100%;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1779, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-more-01 {
+	padding: 35px 0 25px;
+	width: 220px;
+}
+
+/* line 1783, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-more-01 img {
+	width: 220px;
+}
+}
+
+/*  nav-top-01
+--------------------------------------- */
+/* line 1791, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-top-01 {
+	padding-bottom: 65px;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 1797, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-top-01 {
+	padding-bottom: 8px;
+}
+
+/* line 1800, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.nav-top-01 img {
+	width: 110px;
+}
+}
+
+/* -----------------------------------------------------
+  gift area
+----------------------------------------------------- */
+.gift-area {
+	margin: 0 auto 80px;
+	max-width: 700px;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+.gift-area img {
+	width: 100%;
+}
+.gift-text {
+	font-size: 12px;
+	font-weight: bold;
+	padding-right: 16px;
+	padding-left: 16px;
+	margin-top: 16px;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 660px) {
+	.gift-area {
+		width: 270px;
+		margin-bottom: 40px;
+	}
+	.gift-text {
+		font-size: 10px;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+/* -----------------------------------------------------
+  Box
+----------------------------------------------------- */
+/*  box-modal-01
+--------------------------------------- */
+/* line 1813, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99997;
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+/* line 1802, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray.overray-opening {
+	background-color: #FCEB00;
+}
+
+/* line 1823, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray.overray-love {
+	background-color: #ea6182;
+}
+
+/* line 1824, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray.overray-becomenumb {
+	background-color: #009944;
+}
+
+/* line 1825, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray.overray-dangerous {
+	background-color: #5a2883;
+}
+
+/* line 1826, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray.overray-cry {
+	background-color: #f08300;
+}
+
+/* line 1827, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.overray.overray-think {
+	background-color: #14126f;
+}
+
+/* line 1831, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 {
+	margin: 0 auto;
+	margin-left: -410px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 99998;
+	display: none;
+}
+
+/* line 1840, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner {
+	position: relative;
+}
+
+/* line 1843, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .next {
+	position: absolute;
+	bottom: 37px;
+	left: 40px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+/* line 1850, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .next img {
+	width: 56px;
+}
+
+/* line 1855, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .prev {
+	position: absolute;
+	bottom: 37px;
+	right: 40px;
+	z-index: 2;
+	display: none;
+	cursor: pointer;
+}
+
+/* line 1863, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .prev img {
+	width: 56px;
+}
+
+/* line 1868, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+/* line 1876, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .bg {
+	display: none;
+	width: 100%;
+}
+
+/* line 1880, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .bg img {
+	width: 100%;
+}
+
+/* line 1885, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .pic-list {
+	position: relative;
+	width: 820px;
+	height: 614px;
+}
+
+/* line 1890, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .pic-list li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* line 1896, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .pic-list li img {
+	width: 100%;
+}
+
+@media screen and (max-width: 837px) {
+
+/* line 1905, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 {
+	margin-left: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* line 1911, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .next {
+	margin-top: -14px;
+	top: 50%;
+	bottom: inherit;
+	left: 10px;
+}
+
+/* line 1917, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .next img {
+	width: 42px;
+}
+
+/* line 1922, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .prev {
+	margin-top: -14px;
+	top: 50%;
+	bottom: inherit;
+	right: 10px;
+}
+
+/* line 1928, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .prev img {
+	width: 42px;
+}
+
+/* line 1933, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .close {
+	top: 10px;
+	right: 10px;
+}
+
+/* line 1937, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .close img {
+	width: 45px;
+}
+
+/* line 1942, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .bg {
+	display: block;
+	width: 100%;
+}
+
+/* line 1947, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .pic-list {
+	width: 100%;
+	height: inherit;
+}
+
+/* line 1952, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+.box-modal-01 .box-modal-01-inner .pic-list li a {
+	display: block;
+}
+}
+
+/* -----------------------------------------------------
+  Teaser Module
+----------------------------------------------------- */
+/* line 1965, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser {
+	background-image: none !important;
+}
+
+/* line 1968, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 700px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: url("/assets/img/teaser/bg_body_top.png") repeat-x 0 0, url("/assets/img/teaser/bg_body_btm.png") repeat-x 0 100%, url("/assets/img/teaser/bg_body_left.png") repeat-y 0 0, url("/assets/img/teaser/bg_body_right.png") repeat-y 100% 0;
+}
+
+/* line 1979, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .img-02 {
+	position: absolute;
+	bottom: 0;
+	right: 21.1%;
+	visibility: hidden;
+}
+
+/* line 1986, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner {
+	margin-top: -281px;
+	margin-left: -242px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+/* line 1993, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner .img-01 {
+	margin-bottom: 33px;
+	visibility: hidden;
+}
+
+/* line 1998, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner .list-social-01 {
+	text-align: center;
+}
+
+/* line 2001, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner .list-social-01 li {
+	padding: 0 9px;
+	display: inline;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 2013, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container {
+	min-height: 400px;
+	background: url("/assets/img/teaser/bg_body_top_sp.png") repeat-x 0 0, url("/assets/img/teaser/bg_body_btm_sp.png") repeat-x 0 100%, url("/assets/img/teaser/bg_body_left_sp.png") repeat-y 0 0, url("/assets/img/teaser/bg_body_right_sp.png") repeat-y 100% 0;
+}
+
+/* line 2020, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .img-02 {
+	position: absolute;
+	right: 15px;
+}
+
+/* line 2024, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .img-02 img {
+	width: 65px;
+}
+
+/* line 2029, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner {
+	margin-top: -119px;
+	margin-left: -121px;
+}
+
+/* line 2034, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner .img-01 img {
+	width: 242px;
+}
+
+/* line 2041, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module.scss */
+#teaser #container .teaser-inner .list-social-01 li img {
+	width: 25px;
+}
+}
+
+/* -------------------------------------------------------------------
+
+  Modules
+
+-------------------------------------------------------------------- */
+/*  hdg-level2-04
+--------------------------------------- */
+/* line 12, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-04 {
+	padding-top: 160px;
+	padding-bottom: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 20, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-04 {
+	padding-top: 80px;
+	padding-bottom: 25px;
+}
+
+/* line 24, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-04 img {
+	width: 133px;
+}
+}
+
+/*  hdg-level2-05
+--------------------------------------- */
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-05 {
+	padding-top: 160px;
+	padding-bottom: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 40, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-05 {
+	padding-top: 80px;
+	padding-bottom: 25px;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-05 img {
+	width: 108.5px;
+}
+}
+
+/*  hdg-level2-06
+--------------------------------------- */
+/* line 52, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-06 {
+	padding-top: 160px;
+	padding-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.hdg-level2-06 img {
+	width: 238px;
+}
+
+
+@media screen and (max-width: 660px) {
+
+/* line 60, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-06 {
+	padding-top: 80px;
+	padding-bottom: 0;
+}
+
+/* line 64, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-06 img {
+	width: 119px;
+}
+}
+
+/*  hdg-level2-07
+--------------------------------------- */
+/* line 72, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-07 {
+	padding-top: 160px;
+	padding-bottom: 52px;
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 80, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-07 {
+	padding-top: 80px;
+	padding-bottom: 26px;
+}
+
+/* line 84, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-07.pt {
+	padding-top: 90px;
+}
+
+/* line 88, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.hdg-level2-07 img {
+	width: 198.5px;
+}
+}
+
+/* -----------------------------------------------------
+  Lyt
+----------------------------------------------------- */
+/*  lyt-story-01
+--------------------------------------- */
+/* line 100, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-story-01 {
+	margin: 0 auto;
+	width: 446px;
+}
+
+/* line 104, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-story-01 li {
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+/* line 108, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-story-01 li img {
+	cursor: pointer;
+	width: 100%;
+}
+
+/* line 112, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-story-01 li.last {
+	margin-bottom: 43px;
+}
+
+/* line 115, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-story-01 .image {
+	text-align: center;
+}
+
+/* line 118, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-story-01 .image img {
+	max-width: 100%;
+}
+
+/*  lyt-premium-cover
+--------------------------------------- */
+/* line 100, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-premium-cover:last-child {
+	margin-bottom: 80px;
+}
+
+.lyt-premium-cover {
+	max-width: 770px;
+	margin: 0 auto;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+.lyt-premium-cover-inner {
+	margin: 0 auto;
+	width: calc(100% - 89px);
+	background-color: #fff;
+	padding: 58px 37px 28px;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.lyt-premium-cover .image-02,
+.lyt-premium-cover .image-03 {
+	position: relative;
+}
+
+.lyt-premium-cover .image-02 img,
+.lyt-premium-cover .image-03 img {
+	display: block;
+  width: 189px;
+  margin: 26px auto 0;
+}
+
+.lyt-premium-cover .image-02:hover::after,
+.lyt-premium-cover .image-03:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.lyt-premium-cover .title {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	transform: translateY(30px);
+}
+
+.lyt-premium-cover .title img {
+	width: 100%;
+	display: block;
+}
+
+/* line 104, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-premium-cover li {
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+/* line 108, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-premium-cover li img {
+	cursor: pointer;
+	width: 100%;
+}
+
+/* line 112, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-premium-cover li.last {
+	margin-bottom: 43px;
+}
+
+/* line 115, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-premium-cover .image {
+	text-align: center;
+}
+
+/* line 118, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-premium-cover .image img {
+	max-width: 100%;
+}
+
+.lyt-premium-cover .premium-cover-books {
+	margin-top: 32px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-right: -16px;
+	margin-left: -16px;
+	margin-bottom: -24px;
+}
+
+.lyt-premium-cover .premium-cover-bookitem {
+	width: calc(33.333% - (16px * 2));
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-bottom: 24px;
+}
+
+.lyt-premium-cover .premium-cover-bookitem a {
+	position: relative;
+	display: block;
+}
+
+.lyt-premium-cover .premium-cover-bookitem a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+.lyt-premium-cover .premium-cover-bookitem a:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.lyt-premium-cover .premium-cover-bookitem img {
+	width: 100%;
+	display: block;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .2);
+}
+
+.lyt-premium-cover .premium-cover-title {
+	margin-top: 12px;
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.lyt-premium-cover .premium-cover-author {
+	margin-top: 2px;
+	font-size: 12px;
+	text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+	.lyt-premium-cover {
+		width: 270px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.lyt-premium-cover .title {
+		width: calc(100% + 30px);
+		transform: translate(-15px, 20px);
+	}
+	.lyt-premium-cover-inner {
+		width: 100%;
+		padding: 30px 16px 16px;
+		font-size: 14px;
+	}
+	.lyt-premium-cover .image-02 img,
+	.lyt-premium-cover .image-03 img {
+		width: 80%;
+	}
+	.lyt-premium-cover .premium-cover-books {
+		margin-top: 24px;
+	}
+	.lyt-premium-cover .premium-cover-bookitem {
+		width: calc(50% - (16px * 2));
+	}
+	.lyt-premium-cover .premium-cover-author {
+		margin-top: 0;
+		font-size: 10px;
+	}
+	.lyt-premium-cover .premium-cover-title {
+		font-size: 12px;
+		white-space: nowrap;
+	}
+}
+
+/*  lyt-jenre-01
+--------------------------------------- */
+/* line 151, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 li {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+/* line 155, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 li.last {
+	margin-bottom: 0px;
+}
+
+/* line 158, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 .image {
+	text-align: center;
+}
+
+/* line 161, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 .image img {
+	max-width: 100%;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 168, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 li {
+	margin-bottom: 7.5px;
+}
+
+/* line 171, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 li img {
+	width: 222.5px;
+}
+
+/* line 176, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 .image {
+	text-align: center;
+}
+
+/* line 179, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-jenre-01 .image img {
+	width: 79.5px;
+}
+}
+
+/*bunk-buying*/
+.lyt-bulk-buying-01 .text-02 {
+	color: #fff;
+}
+
+/*  lyt-bulk-buying-01
+--------------------------------------- */
+/* line 188, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 {
+	margin: 0 auto;
+	width: 440px;
+}
+
+/* line 192, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .title-01 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* line 196, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .title-01 img {
+	max-width: 100%;
+}
+
+/* line 201, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .text-01 {
+	margin-bottom: 31px;
+	text-align: left;
+}
+
+/* 大人買い終了文言表示 2019/8/6 Y.Rikihisa Add */
+.lyt-bulk-buying-01 .text-03 {
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+/* line 206, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-01 {
+	margin-bottom: 50px;
+	position: relative;
+	text-align: center;
+}
+
+/* line 211, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-01 span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* line 218, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .btn-link-01 {
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+/* line 223, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .btn-link-02 {
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+/* line 228, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 26px 50px 23px;
+	background-color: #000000;
+	box-sizing: border-box;
+}
+
+.lyt-bulk-buying-01 .box-limited-01::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 86px;
+	background-image: url("/assets/img/hdg/bulk_buying_bg_bottom.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1;
+}
+
+.lyt-bulk-buying-01 .box-limited-01 .btn {
+	position: relative;
+	z-index: 2;
+}
+
+/* line 235, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .hdg-image-01 {
+	margin: 0 -26px 30px -23px;
+	text-align: center;
+}
+
+/* line 239, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .hdg-image-01 img {
+	max-width: 100%;
+}
+
+/* line 244, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .title-02 {
+	margin-bottom: 22px;
+}
+
+/* line 247, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .title-02 img {
+	max-width: 100%;
+}
+
+/* line 252, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .text-02 {
+	margin-bottom: 33px;
+	font-size: 100%;
+}
+
+/* line 257, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-03 {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+/* line 261, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-03 span {
+	position: absolute;
+	bottom: 250px;
+	right: 0;
+}
+
+/* line 268, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-04 {
+	margin-bottom: 20px;
+}
+
+/* line 272, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-05 {
+	margin-bottom: 50px;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 278, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 {
+	width: 220px;
+}
+
+/* line 281, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .title-01 {
+	margin-bottom: 10px;
+}
+
+/* line 285, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .text-01 {
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+/* line 290, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-01 {
+	margin-bottom: 25px;
+}
+
+/* line 293, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-01 img {
+	width: 220px;
+}
+
+/* line 296, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-01 span img {
+	width: 69px;
+}
+
+/* line 302, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-02 {
+	left: -0.5px;
+}
+
+/* line 304, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .image-02 img {
+	width: 221px;
+}
+
+/* line 307, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .btn-link-01 {
+	margin-bottom: 17.5px;
+}
+
+/* line 310, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .btn-link-01 img {
+	width: 162.5px;
+}
+
+/* line 313, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .btn-link-02 {
+	margin-bottom: 50px;
+}
+
+/* line 316, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .btn-link-02 img {
+	width: 220px;
+}
+
+/* line 319, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 {
+	padding: 0 13px 25px 11.5px;
+	background-size: 220px;
+}
+
+.lyt-bulk-buying-01 .box-limited-01::after {
+	bottom: -42px;
+}
+
+/* line 323, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .hdg-image-01 {
+	margin: 0 -13px 15px -11.5px;
+}
+
+/* line 326, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .hdg-image-01 img {
+	width: 220px;
+}
+
+/* line 329, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .title-02 {
+	margin-bottom: 11px;
+}
+
+/* line 333, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .text-02 {
+	margin-bottom: 25px;
+	font-size: 12px;
+}
+
+/* line 338, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-03 {
+	margin-bottom: 20px;
+}
+
+/* line 341, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-03 img {
+	width: 195px;
+}
+
+/* line 344, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-03 span img {
+	width: 52px;
+}
+
+/* line 350, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-04 {
+	margin-bottom: 10px;
+}
+
+/* line 353, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-04 img {
+	width: 71px;
+}
+
+/* line 356, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-05 {
+	margin-bottom: 16px;
+}
+
+/* line 359, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .image-05 img {
+	width: 141px;
+}
+
+/* line 362, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.lyt-bulk-buying-01 .box-limited-01 .btn img {
+	width: 190px;
+}
+
+.lyt-bulk-buying-01 .box-limited-01 .image-03 span {
+	bottom: 124px;
+}
+}
+
+/* -----------------------------------------------------
+  List
+----------------------------------------------------- */
+/*  list-book-name-01
+--------------------------------------- */
+/* line 375, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 {
+	margin: 0 auto;
+	max-width: 770px;
+	/* background: #FFEA00; */
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+/* line 379, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title {
+	margin-bottom: 30px;
+	padding: 16px 20px 14px;
+	color: #fff;
+	font-size: 143%;
+}
+
+/* line 385, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-01 {
+	background-color: #e95283;
+}
+
+/* line 386, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-02 {
+	background-color: #f08200;
+}
+
+/* line 387, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-03 {
+	background-color: #aacd06;
+}
+
+/* line 388, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-04 {
+	background-color: #014099;
+}
+
+/* line 389, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-05 {
+	background-color: #146b33;
+}
+
+/* line 390, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-06 {
+	background-color: #41b1e6;
+}
+
+/* line 391, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-07 {
+	background-color: #a66baa;
+}
+
+/* line 392, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-08 {
+	background-color: #929889;
+}
+
+/* line 393, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title.color-09 {
+	background-color: #41b1e6;
+}
+
+.list-book-name-01 .title.color-10 {
+	background-color: #008080;
+}
+
+/* line 396, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list {
+	margin-left: -20px;
+	margin-bottom: 50px;
+	font-size: 0;
+}
+
+/* line 401, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li {
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	width: calc(50% - 40px);
+	border-bottom: 1px solid #ccba00;
+	background: url(/assets/img/icon/icon_arrow_01_pc.png) no-repeat 95.2381% 40%;
+	text-align: left;
+	font-size: 14px;
+}
+
+/* line 413, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li:hover {
+	background: url(/assets/img/icon/icon_arrow_01_pc_o.png) no-repeat 95.2381% 40%;
+}
+
+/* line 416, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li:hover p {
+	color: #ea6182;
+}
+
+/* line 421, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li p {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 1.5;
+	padding-right: 20px;
+}
+
+/* line 427, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li p span {
+	padding-bottom: 5px;
+	display: block;
+	font-size: 15px;
+}
+
+/* line 433, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li p:hover {
+	color: #ea6182;
+	text-decoration: none;
+}
+
+/* line 440, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li.last-li-01,
+.list-book-name-01 .list li.last-li-02 {
+	margin-bottom: 0;
+}
+
+/* line 445, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list.last {
+	margin-bottom: 0;
+}
+
+/* line 449, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 457, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 {
+	width: 270px;
+}
+
+/* line 460, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .title {
+	margin-bottom: 15px;
+	padding: 9px 10px 7px;
+	font-size: 100%;
+}
+
+/* line 466, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list {
+	margin-left: 0;
+	margin-bottom: 25px;
+	width: auto;
+}
+
+/* line 471, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li {
+	margin-left: 0;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	padding-right: 0;
+	display: block;
+	width: 270px;
+	background: url(/assets/img/icon/icon_arrow_01_sp.png) no-repeat 94.77273% 40%;
+	background-size: 9px 17px;
+}
+
+/* line 481, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li:hover {
+	background: url(/assets/img/icon/icon_arrow_01_sp_o.png) no-repeat 94.77273% 40%;
+	background-size: 9px 17px;
+}
+
+/* line 486, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li.last-li-01 {
+	margin-bottom: 15px;
+}
+
+/* line 490, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li.sp-last-border {
+	border-bottom: 0 none;
+}
+
+/* line 494, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li p {
+	padding-right: 30px;
+	font-size: 12px;
+}
+
+/* line 498, C:/_works/anken/100satsu2015/htdocs/_src/sass/_module_02.scss */
+.list-book-name-01 .list li p span {
+	font-size: 14px;
+}
+
+}
+
+/* -----------------------------------------------------
+  Support Modules
+----------------------------------------------------- */
+/*  hasLayout Swicth
+--------------------------------------- */
+/* line 9, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+header,
+footer,
+nav,
+section,
+main {
+	zoom: 1;
+}
+
+/* line 13, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+ul li,
+ol li {
+	zoom: 0;
+}
+
+/*  Clear Fix
+--------------------------------------- */
+/* line 20, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.clearfix:after,
+.list-index-01-container .movie-3:after,
+.list-index-01-container .movie-5:after,
+.list-index-01-container .movie-9:after,
+.list-index-01-container .movie-11:after,
+.list-index-01-container .movie-15:after,
+.lyt-detail-01-container .lyt-detail-01 .data-list:after,
+.lyt-detail-01-container .lyt-detail-01 .data-list li dl:after,
+.lyt-detail-01-container .lyt-detail-01 .btn-list:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*  Margin / Padding Adjust
+--------------------------------------- */
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt0 {
+	margin-top: 0px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr0 {
+	margin-right: 0px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb0 {
+	margin-bottom: 0px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml0 {
+	margin-left: 0px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt0 {
+	padding-top: 0px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr0 {
+	padding-right: 0px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb0 {
+	padding-bottom: 0px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl0 {
+	padding-left: 0px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt5 {
+	margin-top: 5px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr5 {
+	margin-right: 5px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb5 {
+	margin-bottom: 5px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml5 {
+	margin-left: 5px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt5 {
+	padding-top: 5px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr5 {
+	padding-right: 5px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb5 {
+	padding-bottom: 5px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl5 {
+	padding-left: 5px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt10 {
+	margin-top: 10px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr10 {
+	margin-right: 10px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb10 {
+	margin-bottom: 10px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml10 {
+	margin-left: 10px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt10 {
+	padding-top: 10px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr10 {
+	padding-right: 10px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb10 {
+	padding-bottom: 10px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl10 {
+	padding-left: 10px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt15 {
+	margin-top: 15px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr15 {
+	margin-right: 15px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb15 {
+	margin-bottom: 15px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml15 {
+	margin-left: 15px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt15 {
+	padding-top: 15px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr15 {
+	padding-right: 15px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb15 {
+	padding-bottom: 15px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl15 {
+	padding-left: 15px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt20 {
+	margin-top: 20px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr20 {
+	margin-right: 20px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb20 {
+	margin-bottom: 20px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml20 {
+	margin-left: 20px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt20 {
+	padding-top: 20px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr20 {
+	padding-right: 20px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb20 {
+	padding-bottom: 20px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl20 {
+	padding-left: 20px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt25 {
+	margin-top: 25px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr25 {
+	margin-right: 25px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb25 {
+	margin-bottom: 25px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml25 {
+	margin-left: 25px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt25 {
+	padding-top: 25px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr25 {
+	padding-right: 25px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb25 {
+	padding-bottom: 25px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl25 {
+	padding-left: 25px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt30 {
+	margin-top: 30px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr30 {
+	margin-right: 30px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb30 {
+	margin-bottom: 30px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml30 {
+	margin-left: 30px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt30 {
+	padding-top: 30px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr30 {
+	padding-right: 30px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb30 {
+	padding-bottom: 30px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl30 {
+	padding-left: 30px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt35 {
+	margin-top: 35px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr35 {
+	margin-right: 35px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb35 {
+	margin-bottom: 35px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml35 {
+	margin-left: 35px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt35 {
+	padding-top: 35px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr35 {
+	padding-right: 35px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb35 {
+	padding-bottom: 35px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl35 {
+	padding-left: 35px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt40 {
+	margin-top: 40px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr40 {
+	margin-right: 40px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb40 {
+	margin-bottom: 40px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml40 {
+	margin-left: 40px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt40 {
+	padding-top: 40px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr40 {
+	padding-right: 40px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb40 {
+	padding-bottom: 40px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl40 {
+	padding-left: 40px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt45 {
+	margin-top: 45px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr45 {
+	margin-right: 45px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb45 {
+	margin-bottom: 45px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml45 {
+	margin-left: 45px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt45 {
+	padding-top: 45px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr45 {
+	padding-right: 45px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb45 {
+	padding-bottom: 45px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl45 {
+	padding-left: 45px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt50 {
+	margin-top: 50px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr50 {
+	margin-right: 50px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb50 {
+	margin-bottom: 50px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml50 {
+	margin-left: 50px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt50 {
+	padding-top: 50px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr50 {
+	padding-right: 50px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb50 {
+	padding-bottom: 50px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl50 {
+	padding-left: 50px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt55 {
+	margin-top: 55px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr55 {
+	margin-right: 55px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb55 {
+	margin-bottom: 55px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml55 {
+	margin-left: 55px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt55 {
+	padding-top: 55px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr55 {
+	padding-right: 55px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb55 {
+	padding-bottom: 55px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl55 {
+	padding-left: 55px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt60 {
+	margin-top: 60px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr60 {
+	margin-right: 60px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb60 {
+	margin-bottom: 60px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml60 {
+	margin-left: 60px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt60 {
+	padding-top: 60px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr60 {
+	padding-right: 60px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb60 {
+	padding-bottom: 60px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl60 {
+	padding-left: 60px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt65 {
+	margin-top: 65px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr65 {
+	margin-right: 65px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb65 {
+	margin-bottom: 65px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml65 {
+	margin-left: 65px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt65 {
+	padding-top: 65px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr65 {
+	padding-right: 65px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb65 {
+	padding-bottom: 65px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl65 {
+	padding-left: 65px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt70 {
+	margin-top: 70px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr70 {
+	margin-right: 70px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb70 {
+	margin-bottom: 70px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml70 {
+	margin-left: 70px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt70 {
+	padding-top: 70px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr70 {
+	padding-right: 70px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb70 {
+	padding-bottom: 70px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl70 {
+	padding-left: 70px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt75 {
+	margin-top: 75px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr75 {
+	margin-right: 75px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb75 {
+	margin-bottom: 75px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml75 {
+	margin-left: 75px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt75 {
+	padding-top: 75px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr75 {
+	padding-right: 75px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb75 {
+	padding-bottom: 75px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl75 {
+	padding-left: 75px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt80 {
+	margin-top: 80px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr80 {
+	margin-right: 80px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb80 {
+	margin-bottom: 80px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml80 {
+	margin-left: 80px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt80 {
+	padding-top: 80px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr80 {
+	padding-right: 80px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb80 {
+	padding-bottom: 80px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl80 {
+	padding-left: 80px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt85 {
+	margin-top: 85px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr85 {
+	margin-right: 85px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb85 {
+	margin-bottom: 85px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml85 {
+	margin-left: 85px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt85 {
+	padding-top: 85px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr85 {
+	padding-right: 85px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb85 {
+	padding-bottom: 85px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl85 {
+	padding-left: 85px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt90 {
+	margin-top: 90px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr90 {
+	margin-right: 90px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb90 {
+	margin-bottom: 90px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml90 {
+	margin-left: 90px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt90 {
+	padding-top: 90px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr90 {
+	padding-right: 90px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb90 {
+	padding-bottom: 90px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl90 {
+	padding-left: 90px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt95 {
+	margin-top: 95px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr95 {
+	margin-right: 95px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb95 {
+	margin-bottom: 95px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml95 {
+	margin-left: 95px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt95 {
+	padding-top: 95px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr95 {
+	padding-right: 95px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb95 {
+	padding-bottom: 95px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl95 {
+	padding-left: 95px !important;
+}
+
+/* line 30, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt100 {
+	margin-top: 100px !important;
+}
+
+/* line 31, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr100 {
+	margin-right: 100px !important;
+}
+
+/* line 32, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb100 {
+	margin-bottom: 100px !important;
+}
+
+/* line 33, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml100 {
+	margin-left: 100px !important;
+}
+
+/* line 34, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt100 {
+	padding-top: 100px !important;
+}
+
+/* line 35, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr100 {
+	padding-right: 100px !important;
+}
+
+/* line 36, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb100 {
+	padding-bottom: 100px !important;
+}
+
+/* line 37, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl100 {
+	padding-left: 100px !important;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt0 {
+	margin-top: 0px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr0 {
+	margin-right: 0px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb0 {
+	margin-bottom: 0px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml0 {
+	margin-left: 0px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt0 {
+	padding-top: 0px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr0 {
+	padding-right: 0px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb0 {
+	padding-bottom: 0px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl0 {
+	padding-left: 0px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt5 {
+	margin-top: 2.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr5 {
+	margin-right: 2.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb5 {
+	margin-bottom: 2.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml5 {
+	margin-left: 2.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt5 {
+	padding-top: 2.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr5 {
+	padding-right: 2.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb5 {
+	padding-bottom: 2.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl5 {
+	padding-left: 2.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt10 {
+	margin-top: 5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr10 {
+	margin-right: 5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb10 {
+	margin-bottom: 5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml10 {
+	margin-left: 5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt10 {
+	padding-top: 5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr10 {
+	padding-right: 5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb10 {
+	padding-bottom: 5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl10 {
+	padding-left: 5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt15 {
+	margin-top: 7.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr15 {
+	margin-right: 7.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb15 {
+	margin-bottom: 7.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml15 {
+	margin-left: 7.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt15 {
+	padding-top: 7.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr15 {
+	padding-right: 7.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb15 {
+	padding-bottom: 7.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl15 {
+	padding-left: 7.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt20 {
+	margin-top: 10px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr20 {
+	margin-right: 10px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb20 {
+	margin-bottom: 10px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml20 {
+	margin-left: 10px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt20 {
+	padding-top: 10px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr20 {
+	padding-right: 10px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb20 {
+	padding-bottom: 10px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl20 {
+	padding-left: 10px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt25 {
+	margin-top: 12.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr25 {
+	margin-right: 12.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb25 {
+	margin-bottom: 12.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml25 {
+	margin-left: 12.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt25 {
+	padding-top: 12.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr25 {
+	padding-right: 12.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb25 {
+	padding-bottom: 12.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl25 {
+	padding-left: 12.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt30 {
+	margin-top: 15px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr30 {
+	margin-right: 15px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb30 {
+	margin-bottom: 15px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml30 {
+	margin-left: 15px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt30 {
+	padding-top: 15px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr30 {
+	padding-right: 15px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb30 {
+	padding-bottom: 15px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl30 {
+	padding-left: 15px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt35 {
+	margin-top: 17.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr35 {
+	margin-right: 17.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb35 {
+	margin-bottom: 17.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml35 {
+	margin-left: 17.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt35 {
+	padding-top: 17.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr35 {
+	padding-right: 17.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb35 {
+	padding-bottom: 17.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl35 {
+	padding-left: 17.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt40 {
+	margin-top: 20px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr40 {
+	margin-right: 20px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb40 {
+	margin-bottom: 20px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml40 {
+	margin-left: 20px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt40 {
+	padding-top: 20px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr40 {
+	padding-right: 20px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb40 {
+	padding-bottom: 20px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl40 {
+	padding-left: 20px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt45 {
+	margin-top: 22.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr45 {
+	margin-right: 22.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb45 {
+	margin-bottom: 22.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml45 {
+	margin-left: 22.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt45 {
+	padding-top: 22.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr45 {
+	padding-right: 22.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb45 {
+	padding-bottom: 22.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl45 {
+	padding-left: 22.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt50 {
+	margin-top: 25px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr50 {
+	margin-right: 25px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb50 {
+	margin-bottom: 25px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml50 {
+	margin-left: 25px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt50 {
+	padding-top: 25px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr50 {
+	padding-right: 25px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb50 {
+	padding-bottom: 25px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl50 {
+	padding-left: 25px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt55 {
+	margin-top: 27.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr55 {
+	margin-right: 27.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb55 {
+	margin-bottom: 27.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml55 {
+	margin-left: 27.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt55 {
+	padding-top: 27.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr55 {
+	padding-right: 27.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb55 {
+	padding-bottom: 27.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl55 {
+	padding-left: 27.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt60 {
+	margin-top: 30px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr60 {
+	margin-right: 30px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb60 {
+	margin-bottom: 30px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml60 {
+	margin-left: 30px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt60 {
+	padding-top: 30px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr60 {
+	padding-right: 30px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb60 {
+	padding-bottom: 30px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl60 {
+	padding-left: 30px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt65 {
+	margin-top: 32.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr65 {
+	margin-right: 32.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb65 {
+	margin-bottom: 32.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml65 {
+	margin-left: 32.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt65 {
+	padding-top: 32.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr65 {
+	padding-right: 32.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb65 {
+	padding-bottom: 32.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl65 {
+	padding-left: 32.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt70 {
+	margin-top: 35px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr70 {
+	margin-right: 35px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb70 {
+	margin-bottom: 35px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml70 {
+	margin-left: 35px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt70 {
+	padding-top: 35px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr70 {
+	padding-right: 35px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb70 {
+	padding-bottom: 35px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl70 {
+	padding-left: 35px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt75 {
+	margin-top: 37.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr75 {
+	margin-right: 37.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb75 {
+	margin-bottom: 37.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml75 {
+	margin-left: 37.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt75 {
+	padding-top: 37.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr75 {
+	padding-right: 37.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb75 {
+	padding-bottom: 37.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl75 {
+	padding-left: 37.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt80 {
+	margin-top: 40px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr80 {
+	margin-right: 40px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb80 {
+	margin-bottom: 40px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml80 {
+	margin-left: 40px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt80 {
+	padding-top: 40px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr80 {
+	padding-right: 40px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb80 {
+	padding-bottom: 40px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl80 {
+	padding-left: 40px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt85 {
+	margin-top: 42.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr85 {
+	margin-right: 42.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb85 {
+	margin-bottom: 42.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml85 {
+	margin-left: 42.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt85 {
+	padding-top: 42.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr85 {
+	padding-right: 42.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb85 {
+	padding-bottom: 42.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl85 {
+	padding-left: 42.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt90 {
+	margin-top: 45px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr90 {
+	margin-right: 45px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb90 {
+	margin-bottom: 45px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml90 {
+	margin-left: 45px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt90 {
+	padding-top: 45px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr90 {
+	padding-right: 45px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb90 {
+	padding-bottom: 45px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl90 {
+	padding-left: 45px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt95 {
+	margin-top: 47.5px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr95 {
+	margin-right: 47.5px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb95 {
+	margin-bottom: 47.5px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml95 {
+	margin-left: 47.5px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt95 {
+	padding-top: 47.5px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr95 {
+	padding-right: 47.5px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb95 {
+	padding-bottom: 47.5px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl95 {
+	padding-left: 47.5px !important;
+}
+
+/* line 42, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mt100 {
+	margin-top: 50px !important;
+}
+
+/* line 43, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mr100 {
+	margin-right: 50px !important;
+}
+
+/* line 44, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.mb100 {
+	margin-bottom: 50px !important;
+}
+
+/* line 45, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.ml100 {
+	margin-left: 50px !important;
+}
+
+/* line 46, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pt100 {
+	padding-top: 50px !important;
+}
+
+/* line 47, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pr100 {
+	padding-right: 50px !important;
+}
+
+/* line 48, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pb100 {
+	padding-bottom: 50px !important;
+}
+
+/* line 49, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pl100 {
+	padding-left: 50px !important;
+}
+}
+
+/*  Table Cell Adjust
+--------------------------------------- */
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct0 {
+	width: 0%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct1 {
+	width: 1%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct2 {
+	width: 2%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct3 {
+	width: 3%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct4 {
+	width: 4%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct5 {
+	width: 5%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct6 {
+	width: 6%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct7 {
+	width: 7%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct8 {
+	width: 8%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct9 {
+	width: 9%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct10 {
+	width: 10%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct11 {
+	width: 11%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct12 {
+	width: 12%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct13 {
+	width: 13%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct14 {
+	width: 14%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct15 {
+	width: 15%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct16 {
+	width: 16%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct17 {
+	width: 17%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct18 {
+	width: 18%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct19 {
+	width: 19%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct20 {
+	width: 20%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct21 {
+	width: 21%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct22 {
+	width: 22%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct23 {
+	width: 23%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct24 {
+	width: 24%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct25 {
+	width: 25%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct26 {
+	width: 26%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct27 {
+	width: 27%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct28 {
+	width: 28%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct29 {
+	width: 29%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct30 {
+	width: 30%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct31 {
+	width: 31%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct32 {
+	width: 32%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct33 {
+	width: 33%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct34 {
+	width: 34%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct35 {
+	width: 35%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct36 {
+	width: 36%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct37 {
+	width: 37%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct38 {
+	width: 38%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct39 {
+	width: 39%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct40 {
+	width: 40%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct41 {
+	width: 41%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct42 {
+	width: 42%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct43 {
+	width: 43%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct44 {
+	width: 44%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct45 {
+	width: 45%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct46 {
+	width: 46%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct47 {
+	width: 47%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct48 {
+	width: 48%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct49 {
+	width: 49%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct50 {
+	width: 50%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct51 {
+	width: 51%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct52 {
+	width: 52%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct53 {
+	width: 53%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct54 {
+	width: 54%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct55 {
+	width: 55%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct56 {
+	width: 56%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct57 {
+	width: 57%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct58 {
+	width: 58%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct59 {
+	width: 59%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct60 {
+	width: 60%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct61 {
+	width: 61%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct62 {
+	width: 62%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct63 {
+	width: 63%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct64 {
+	width: 64%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct65 {
+	width: 65%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct66 {
+	width: 66%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct67 {
+	width: 67%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct68 {
+	width: 68%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct69 {
+	width: 69%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct70 {
+	width: 70%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct71 {
+	width: 71%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct72 {
+	width: 72%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct73 {
+	width: 73%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct74 {
+	width: 74%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct75 {
+	width: 75%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct76 {
+	width: 76%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct77 {
+	width: 77%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct78 {
+	width: 78%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct79 {
+	width: 79%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct80 {
+	width: 80%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct81 {
+	width: 81%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct82 {
+	width: 82%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct83 {
+	width: 83%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct84 {
+	width: 84%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct85 {
+	width: 85%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct86 {
+	width: 86%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct87 {
+	width: 87%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct88 {
+	width: 88%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct89 {
+	width: 89%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct90 {
+	width: 90%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct91 {
+	width: 91%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct92 {
+	width: 92%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct93 {
+	width: 93%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct94 {
+	width: 94%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct95 {
+	width: 95%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct96 {
+	width: 96%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct97 {
+	width: 97%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct98 {
+	width: 98%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct99 {
+	width: 99%;
+}
+
+/* line 56, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.pct100 {
+	width: 100%;
+}
+
+/*  Text Align
+--------------------------------------- */
+/* line 61, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.left {
+	text-align: left !important;
+}
+
+/* line 62, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.center {
+	text-align: center !important;
+}
+
+/* line 63, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.right {
+	text-align: right !important;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 66, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-left {
+	text-align: left !important;
+}
+
+/* line 67, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-center {
+	text-align: center !important;
+}
+
+/* line 68, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-right {
+	text-align: right !important;
+}
+}
+
+/*  Vertical Align
+--------------------------------------- */
+/* line 73, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.top {
+	vertical-align: top !important;
+}
+
+/* line 74, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.middle {
+	vertical-align: middle !important;
+}
+
+/* line 75, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.bottom {
+	vertical-align: bottom !important;
+}
+
+/*  Border None
+--------------------------------------- */
+/* line 79, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.bt-none {
+	border-top: none !important;
+}
+
+/* line 80, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.br-none {
+	border-right: none !important;
+}
+
+/* line 81, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.bb-none {
+	border-bottom: none !important;
+}
+
+/* line 82, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.bl-none {
+	border-left: none !important;
+}
+
+/*  Font Size
+--------------------------------------- */
+/* line 86, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.small {
+	font-size: 84% !important;
+}
+
+/* line 87, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.large {
+	font-size: 109% !important;
+}
+
+/*  Font weight
+--------------------------------------- */
+/* line 91, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.normal {
+	font-weight: normal !important;
+}
+
+/*  Display Switch
+--------------------------------------- */
+/* line 96, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.tablet-inline,
+.sp-inline {
+	display: block;
+}
+
+/* line 100, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-block {
+	display: inline;
+}
+
+@media screen and (max-width: 1057px) {
+
+/* line 105, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.tablet-inline {
+	display: inline !important;
+}
+}
+
+.pc-none {
+	display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+
+.pc-none {
+	display: block !important;
+}
+
+/* line 111, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-inline {
+	display: inline !important;
+}
+
+/* line 115, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-none {
+	display: none !important;
+}
+
+/* line 119, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-block {
+	display: block !important;
+}
+}
+
+/*  Img Width Adjust
+--------------------------------------- */
+/* line 126, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.w-100 {
+	width: 100%;
+}
+
+/* line 127, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.m-w100 {
+	max-width: 100% !important;
+	width: auto !important;
+}
+
+/* line 128, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.w-auto {
+	width: auto !important;
+}
+
+@media screen and (max-width: 660px) {
+
+/* line 131, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.sp-w-50 {
+	width: 50% !important;
+}
+}
+
+/*  Fade Roll Over
+--------------------------------------- */
+/* line 136, C:/_works/anken/100satsu2015/htdocs/_src/sass/_support.scss */
+.js-fade-roll img {
+	background: url("/assets/img/bg/bg_spacer.png") repeat 0 0;
+}
+
+
+/*  News
+--------------------------------------- */
+.news-area {
+	max-width: 455px;
+    margin: 0 auto;
+    text-align: center;
+}
+@media print, screen and (max-width: 660px) {
+	.news-area {
+		max-width: 220px;
+	}
+}
+a.news-text {
+	font-size: 12px;
+    text-decoration: underline;
+}
+a.news-text:hover {
+	text-decoration: none;
+}
+
+/*  Modal
+--------------------------------------- */
+.modal-link-area {
+	max-width: 441px;
+	margin: 10px auto 30px;
+	text-align: center;
+}
+@media print, screen and (max-width: 660px) {
+	.modal-link-area {
+		max-width: 220px;
+	}
+}
+
+a.modal-link {
+	font-size: 12px;
+	text-decoration: underline;
+}
+a.modal-link:visited {
+	text-decoration: underline;
+}
+a.modal-link:hover,
+a.modal-link:active {
+	text-decoration: none;
+}
+
+.modal-area {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+.modal-wrapper {
+	position: relative;
+	width: 100%;
+    height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	z-index: 3;
+}
+.modal-bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 233, 0, 0.9);
+	z-index: 1;
+}
+.modal-container {
+    position: relative;
+	width: calc(100% - 32px);
+	max-width: 570px;
+	background: #fff;
+	z-index: 3;
+}
+.modal-inner {
+	padding: 40px 16px 16px;
+}
+
+.modal-title {
+	font-size: 16px;
+	text-align: center;
+}
+.modal-text {
+	font-size: 16px;
+	margin-top: 32px;
+}
+
+@media print, screen and (max-width: 660px) {
+	.modal-title {
+		font-size: 14px;
+	}
+	.modal-text {
+		font-size: 14px;
+		margin-top: 16px;
+	}
+}
+
+.modal-text + * {
+	margin-top: 1em;
+}
+.modal-close {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	text-align: center;
+}
+.modal-close span {
+	display: inline-flex;
+	align-items: center;
+	height: 16px;
+	cursor: pointer;
+	padding-left: 20px;
+	font-size: 14px;
+	background: url(/assets/img/icon/icon_close.png) left center no-repeat;
+	background-size: 15px 15px;
+}
+
+
+html.is-modalActive .sp-back,
+html.is-modalActive #content #content-inner {
+	position: relative;
+	z-index: 100;
+}
+
+/* -------------------------------------------------------------------
+
+  Print
+
+-------------------------------------------------------------------- */
+@media print {
+}
+/* line 9, C:/_works/anken/100satsu2015/htdocs/
+
+/*** add 2016/06/29 誘導バナー追加 ***/
+.bnr-area {
+	text-align: center;
+	margin-bottom:30px;
+	padding-bottom: 130px;
+}
+
+.bnr-area .bnr-item {
+	width: 440px;
+}
+
+@media screen and (max-width: 660px) {
+
+	.bnr-area img,
+	.bnr-area .bnr-item {
+		width:270px;
+		height: auto;
+	}
+}
+
+.bnr-area .mb10 {
+	margin-bottom:10px;
+}
+
+.rollover-image:hover {
+	opacity: 0.8;
+}
+
+.js-rollover img,
+.js-rollover input[type="image"] {
+	transition: filter 0.2s ease;
+}
+
+.js-rollover:hover img,
+.js-rollover:hover input[type="image"] {
+	filter: brightness(1.08);
+}
+
+
+/* -------------------------------------------------------------------
+
+  campaign
+
+-------------------------------------------------------------------- */
+
+@media only screen and (max-width: 667px) {
+	.contents-wrap.campaign-contents {
+		background: #FFEA00;
+	}
+}

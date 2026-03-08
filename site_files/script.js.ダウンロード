@@ -1,0 +1,1044 @@
+/*!
+ * imagesLoaded PACKAGED v3.1.8
+ * JavaScript is all like "You images are done yet or what?"
+ * MIT License
+ */
+
+(function(){function e(){}function t(e,t){for(var n=e.length;n--;)if(e[n].listener===t)return n;return-1}function n(e){return function(){return this[e].apply(this,arguments)}}var i=e.prototype,r=this,o=r.EventEmitter;i.getListeners=function(e){var t,n,i=this._getEvents();if("object"==typeof e){t={};for(n in i)i.hasOwnProperty(n)&&e.test(n)&&(t[n]=i[n])}else t=i[e]||(i[e]=[]);return t},i.flattenListeners=function(e){var t,n=[];for(t=0;e.length>t;t+=1)n.push(e[t].listener);return n},i.getListenersAsObject=function(e){var t,n=this.getListeners(e);return n instanceof Array&&(t={},t[e]=n),t||n},i.addListener=function(e,n){var i,r=this.getListenersAsObject(e),o="object"==typeof n;for(i in r)r.hasOwnProperty(i)&&-1===t(r[i],n)&&r[i].push(o?n:{listener:n,once:!1});return this},i.on=n("addListener"),i.addOnceListener=function(e,t){return this.addListener(e,{listener:t,once:!0})},i.once=n("addOnceListener"),i.defineEvent=function(e){return this.getListeners(e),this},i.defineEvents=function(e){for(var t=0;e.length>t;t+=1)this.defineEvent(e[t]);return this},i.removeListener=function(e,n){var i,r,o=this.getListenersAsObject(e);for(r in o)o.hasOwnProperty(r)&&(i=t(o[r],n),-1!==i&&o[r].splice(i,1));return this},i.off=n("removeListener"),i.addListeners=function(e,t){return this.manipulateListeners(!1,e,t)},i.removeListeners=function(e,t){return this.manipulateListeners(!0,e,t)},i.manipulateListeners=function(e,t,n){var i,r,o=e?this.removeListener:this.addListener,s=e?this.removeListeners:this.addListeners;if("object"!=typeof t||t instanceof RegExp)for(i=n.length;i--;)o.call(this,t,n[i]);else for(i in t)t.hasOwnProperty(i)&&(r=t[i])&&("function"==typeof r?o.call(this,i,r):s.call(this,i,r));return this},i.removeEvent=function(e){var t,n=typeof e,i=this._getEvents();if("string"===n)delete i[e];else if("object"===n)for(t in i)i.hasOwnProperty(t)&&e.test(t)&&delete i[t];else delete this._events;return this},i.removeAllListeners=n("removeEvent"),i.emitEvent=function(e,t){var n,i,r,o,s=this.getListenersAsObject(e);for(r in s)if(s.hasOwnProperty(r))for(i=s[r].length;i--;)n=s[r][i],n.once===!0&&this.removeListener(e,n.listener),o=n.listener.apply(this,t||[]),o===this._getOnceReturnValue()&&this.removeListener(e,n.listener);return this},i.trigger=n("emitEvent"),i.emit=function(e){var t=Array.prototype.slice.call(arguments,1);return this.emitEvent(e,t)},i.setOnceReturnValue=function(e){return this._onceReturnValue=e,this},i._getOnceReturnValue=function(){return this.hasOwnProperty("_onceReturnValue")?this._onceReturnValue:!0},i._getEvents=function(){return this._events||(this._events={})},e.noConflict=function(){return r.EventEmitter=o,e},"function"==typeof define&&define.amd?define("eventEmitter/EventEmitter",[],function(){return e}):"object"==typeof module&&module.exports?module.exports=e:this.EventEmitter=e}).call(this),function(e){function t(t){var n=e.event;return n.target=n.target||n.srcElement||t,n}var n=document.documentElement,i=function(){};n.addEventListener?i=function(e,t,n){e.addEventListener(t,n,!1)}:n.attachEvent&&(i=function(e,n,i){e[n+i]=i.handleEvent?function(){var n=t(e);i.handleEvent.call(i,n)}:function(){var n=t(e);i.call(e,n)},e.attachEvent("on"+n,e[n+i])});var r=function(){};n.removeEventListener?r=function(e,t,n){e.removeEventListener(t,n,!1)}:n.detachEvent&&(r=function(e,t,n){e.detachEvent("on"+t,e[t+n]);try{delete e[t+n]}catch(i){e[t+n]=void 0}});var o={bind:i,unbind:r};"function"==typeof define&&define.amd?define("eventie/eventie",o):e.eventie=o}(this),function(e,t){"function"==typeof define&&define.amd?define(["eventEmitter/EventEmitter","eventie/eventie"],function(n,i){return t(e,n,i)}):"object"==typeof exports?module.exports=t(e,require("wolfy87-eventemitter"),require("eventie")):e.imagesLoaded=t(e,e.EventEmitter,e.eventie)}(window,function(e,t,n){function i(e,t){for(var n in t)e[n]=t[n];return e}function r(e){return"[object Array]"===d.call(e)}function o(e){var t=[];if(r(e))t=e;else if("number"==typeof e.length)for(var n=0,i=e.length;i>n;n++)t.push(e[n]);else t.push(e);return t}function s(e,t,n){if(!(this instanceof s))return new s(e,t);"string"==typeof e&&(e=document.querySelectorAll(e)),this.elements=o(e),this.options=i({},this.options),"function"==typeof t?n=t:i(this.options,t),n&&this.on("always",n),this.getImages(),a&&(this.jqDeferred=new a.Deferred);var r=this;setTimeout(function(){r.check()})}function f(e){this.img=e}function c(e){this.src=e,v[e]=this}var a=e.jQuery,u=e.console,h=u!==void 0,d=Object.prototype.toString;s.prototype=new t,s.prototype.options={},s.prototype.getImages=function(){this.images=[];for(var e=0,t=this.elements.length;t>e;e++){var n=this.elements[e];"IMG"===n.nodeName&&this.addImage(n);var i=n.nodeType;if(i&&(1===i||9===i||11===i))for(var r=n.querySelectorAll("img"),o=0,s=r.length;s>o;o++){var f=r[o];this.addImage(f)}}},s.prototype.addImage=function(e){var t=new f(e);this.images.push(t)},s.prototype.check=function(){function e(e,r){return t.options.debug&&h&&u.log("confirm",e,r),t.progress(e),n++,n===i&&t.complete(),!0}var t=this,n=0,i=this.images.length;if(this.hasAnyBroken=!1,!i)return this.complete(),void 0;for(var r=0;i>r;r++){var o=this.images[r];o.on("confirm",e),o.check()}},s.prototype.progress=function(e){this.hasAnyBroken=this.hasAnyBroken||!e.isLoaded;var t=this;setTimeout(function(){t.emit("progress",t,e),t.jqDeferred&&t.jqDeferred.notify&&t.jqDeferred.notify(t,e)})},s.prototype.complete=function(){var e=this.hasAnyBroken?"fail":"done";this.isComplete=!0;var t=this;setTimeout(function(){if(t.emit(e,t),t.emit("always",t),t.jqDeferred){var n=t.hasAnyBroken?"reject":"resolve";t.jqDeferred[n](t)}})},a&&(a.fn.imagesLoaded=function(e,t){var n=new s(this,e,t);return n.jqDeferred.promise(a(this))}),f.prototype=new t,f.prototype.check=function(){var e=v[this.img.src]||new c(this.img.src);if(e.isConfirmed)return this.confirm(e.isLoaded,"cached was confirmed"),void 0;if(this.img.complete&&void 0!==this.img.naturalWidth)return this.confirm(0!==this.img.naturalWidth,"naturalWidth"),void 0;var t=this;e.on("confirm",function(e,n){return t.confirm(e.isLoaded,n),!0}),e.check()},f.prototype.confirm=function(e,t){this.isLoaded=e,this.emit("confirm",this,t)};var v={};return c.prototype=new t,c.prototype.check=function(){if(!this.isChecked){var e=new Image;n.bind(e,"load",this),n.bind(e,"error",this),e.src=this.src,this.isChecked=!0}},c.prototype.handleEvent=function(e){var t="on"+e.type;this[t]&&this[t](e)},c.prototype.onload=function(e){this.confirm(!0,"onload"),this.unbindProxyEvents(e)},c.prototype.onerror=function(e){this.confirm(!1,"onerror"),this.unbindProxyEvents(e)},c.prototype.confirm=function(e,t){this.isConfirmed=!0,this.isLoaded=e,this.emit("confirm",this,t)},c.prototype.unbindProxyEvents=function(e){n.unbind(e.target,"load",this),n.unbind(e.target,"error",this)},s});
+/*
+ * backgroundSize: A jQuery cssHook adding support for "cover" and "contain" to IE6,7,8
+ *
+ * Requirements:
+ * - jQuery 1.7.0+
+ *
+ * Limitations:
+ * - doesn't work with multiple backgrounds (use the :after trick)
+ * - doesn't work with the "4 values syntax" of background-position
+ * - doesn't work with lengths in background-position (only percentages and keywords)
+ * - doesn't work with "background-repeat: repeat;"
+ * - doesn't work with non-default values of background-clip/origin/attachment/scroll
+ * - you should still test your website in IE!
+ *
+ * latest version and complete README available on Github:
+ * https://github.com/louisremi/jquery.backgroundSize.js
+ *
+ * Copyright 2012 @louis_remi
+ * Licensed under the MIT license.
+ *
+ * This saved you an hour of work?
+ * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
+ *
+ */
+(function($,window,document,Math,undefined) {
+
+var div = $( "<div>" )[0],
+	rsrc = /url\(["']?(.*?)["']?\)/,
+	watched = [],
+	positions = {
+		top: 0,
+		left: 0,
+		bottom: 1,
+		right: 1,
+		center: .5
+	};
+
+// feature detection
+if ( "backgroundSize" in div.style && !$.debugBGS ) { return; }
+
+$.cssHooks.backgroundSize = {
+	set: function( elem, value ) {
+		var firstTime = !$.data( elem, "bgsImg" ),
+			pos,
+			$wrapper, $img;
+
+		$.data( elem, "bgsValue", value );
+
+		if ( firstTime ) {
+			// add this element to the 'watched' list so that it's updated on resize
+			watched.push( elem );
+
+			$.refreshBackgroundDimensions( elem, true );
+
+			// create wrapper and img
+			$wrapper = $( "<div>" ).css({
+				position: "absolute",
+				zIndex: -1,
+				top: 0,
+				right: 0,
+				left: 0,
+				bottom: 0,
+				overflow: "hidden"
+			});
+
+			$img = $( "<img>" ).css({
+				position: "absolute"
+			}).appendTo( $wrapper ),
+
+			$wrapper.prependTo( elem );
+
+			$.data( elem, "bgsImg", $img[0] );
+
+			pos = ( 
+				// Firefox, Chrome (for debug)
+				$.css( elem, "backgroundPosition" ) ||
+				// IE8
+				$.css( elem, "backgroundPositionX" ) + " " + $.css( elem, "backgroundPositionY" )
+			).split(" ");
+
+			// Only compatible with 1 or 2 percentage or keyword values,
+			// Not yet compatible with length values and 4 values.
+			$.data( elem, "bgsPos", [ 
+				positions[ pos[0] ] || parseFloat( pos[0] ) / 100, 
+				positions[ pos[1] ] || parseFloat( pos[1] ) / 100
+			]);
+
+			// This is the part where we mess with the existing DOM
+			// to make sure that the background image is correctly zIndexed
+			$.css( elem, "zIndex" ) == "auto" && ( elem.style.zIndex = 0 );
+			$.css( elem, "position" ) == "static" && ( elem.style.position = "relative" );
+
+			$.refreshBackgroundImage( elem );
+
+		} else {
+			$.refreshBackground( elem );
+		}
+	},
+
+	get: function( elem ) {
+		return $.data( elem, "bgsValue" ) || "";
+	}
+};
+
+// The background should refresh automatically when changing the background-image
+$.cssHooks.backgroundImage = {
+	set: function( elem, value ) {
+		// if the element has a backgroundSize, refresh its background
+		return $.data( elem, "bgsImg") ?
+			$.refreshBackgroundImage( elem, value ) :
+			// otherwise set the background-image normally
+			value;
+	}
+};
+
+$.refreshBackgroundDimensions = function( elem, noBgRefresh ) {
+	var $elem = $(elem),
+		currDim = {
+			width: $elem.innerWidth(),
+			height: $elem.innerHeight()
+		},
+		prevDim = $.data( elem, "bgsDim" ),
+		changed = !prevDim ||
+			currDim.width != prevDim.width ||
+			currDim.height != prevDim.height;
+
+	$.data( elem, "bgsDim", currDim );
+
+	if ( changed && !noBgRefresh ) {
+		$.refreshBackground( elem );
+	}
+};
+
+$.refreshBackgroundImage = function( elem, value ) {
+	var img = $.data( elem, "bgsImg" ),
+		currSrc = ( rsrc.exec( value || $.css( elem, "backgroundImage" ) ) || [] )[1],
+		prevSrc = img && img.src,
+		changed = currSrc != prevSrc,
+		imgWidth, imgHeight;
+
+	if ( changed ) {
+		img.style.height = img.style.width = "auto";
+
+		img.onload = function() {
+			var dim = {
+				width: img.width,
+				height: img.height
+			};
+
+			// ignore onload on the proxy image
+			if ( dim.width == 1 && dim.height == 1 ) { return; }
+
+			$.data( elem, "bgsImgDim", dim );
+			$.data( elem, "bgsConstrain", false );
+
+			$.refreshBackground( elem );
+
+			img.style.visibility = "visible";
+
+			img.onload = null;
+		};
+
+		img.style.visibility = "hidden";
+		img.src = currSrc;
+
+		if ( img.readyState || img.complete ) {
+			img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+			img.src = currSrc;
+		}
+
+		elem.style.backgroundImage = "none";
+	}
+};
+
+$.refreshBackground = function( elem ) {
+	var value = $.data( elem, "bgsValue" ),
+		elemDim = $.data( elem, "bgsDim" ),
+		imgDim = $.data( elem, "bgsImgDim" ),
+		$img = $( $.data( elem, "bgsImg" ) ),
+		pos = $.data( elem, "bgsPos" ),
+		prevConstrain = $.data( elem, "bgsConstrain" ),
+		currConstrain,
+		elemRatio = elemDim.width / elemDim.height,
+		imgRatio = imgDim.width / imgDim.height,
+		delta;
+
+	if ( value == "contain" ) {
+		if ( imgRatio > elemRatio ) {
+			$.data( elem, "bgsConstrain", ( currConstrain = "width" ) );
+
+			delta = Math.floor( ( elemDim.height - elemDim.width / imgRatio ) * pos[1] );
+
+			$img.css({
+				top: delta
+			});
+
+			// when switchin from height to with constraint,
+			// make sure to release contraint on height and reset left
+			if ( currConstrain != prevConstrain ) {
+				$img.css({
+					width: "100%",
+					height: "auto",
+					left: 0
+				});
+			}
+
+		} else {
+			$.data( elem, "bgsConstrain", ( currConstrain = "height" ) );
+
+			delta = Math.floor( ( elemDim.width - elemDim.height * imgRatio ) * pos[0] );
+
+			$img.css({
+				left: delta
+			});
+
+			if ( currConstrain != prevConstrain ) {
+				$img.css({
+					height: "100%",
+					width: "auto",
+					top: 0
+				});
+			}
+		}
+
+	} else if ( value == "cover" ) {
+		if ( imgRatio > elemRatio ) {
+			$.data( elem, "bgsConstrain", ( currConstrain = "height" ) );
+
+			delta = Math.floor( ( elemDim.height * imgRatio - elemDim.width ) * pos[0] );
+
+			$img.css({
+				left: -delta
+			});
+
+			if ( currConstrain != prevConstrain ) {
+				$img.css({
+					height:"100%",
+					width: "auto",
+					top: 0
+				});
+			}
+
+		} else {
+			$.data( elem, "bgsConstrain", ( currConstrain = "width" ) );
+
+			delta = Math.floor( ( elemDim.width / imgRatio - elemDim.height ) * pos[1] );
+
+			$img.css({
+				top: -delta
+			});
+
+			if ( currConstrain != prevConstrain ) {
+				$img.css({
+					width: "100%",
+					height: "auto",
+					left: 0
+				});
+			}
+		}
+	}
+}
+
+// Built-in throttledresize
+var $event = $.event,
+	$special,
+	dummy = {_:0},
+	frame = 0,
+	wasResized, animRunning;
+
+$special = $event.special.throttledresize = {
+	setup: function() {
+		$( this ).on( "resize", $special.handler );
+	},
+	teardown: function() {
+		$( this ).off( "resize", $special.handler );
+	},
+	handler: function( event, execAsap ) {
+		// Save the context
+		var context = this,
+			args = arguments;
+
+		wasResized = true;
+
+        if ( !animRunning ) {
+        	$(dummy).animate(dummy, { duration: Infinity, step: function() {
+	        	frame++;
+
+	        	if ( frame > $special.threshold && wasResized || execAsap ) {
+	        		// set correct event type
+        			event.type = "throttledresize";
+	        		$event.dispatch.apply( context, args );
+	        		wasResized = false;
+	        		frame = 0;
+	        	}
+	        	if ( frame > 9 ) {
+	        		$(dummy).stop();
+	        		animRunning = false;
+	        		frame = 0;
+	        	}
+	        }});
+	        animRunning = true;
+        }
+	},
+	threshold: 1
+};
+
+// All backgrounds should refresh automatically when the window is resized
+$(window).on("throttledresize", function() {
+	$(watched).each(function() {
+		$.refreshBackgroundDimensions( this );
+	});
+});
+
+})(jQuery,window,document,Math);
+/*!
+ * jQuery Cookie Plugin v1.4.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2006, 2014 Klaus Hartl
+ * Released under the MIT license
+ */
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD (Register as an anonymous module)
+		define(['jquery'], factory);
+	} else if (typeof exports === 'object') {
+		// Node/CommonJS
+		module.exports = factory(require('jquery'));
+	} else {
+		// Browser globals
+		factory(jQuery);
+	}
+}(function ($) {
+
+	var pluses = /\+/g;
+
+	function encode(s) {
+		return config.raw ? s : encodeURIComponent(s);
+	}
+
+	function decode(s) {
+		return config.raw ? s : decodeURIComponent(s);
+	}
+
+	function stringifyCookieValue(value) {
+		return encode(config.json ? JSON.stringify(value) : String(value));
+	}
+
+	function parseCookieValue(s) {
+		if (s.indexOf('"') === 0) {
+			// This is a quoted cookie as according to RFC2068, unescape...
+			s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+		}
+
+		try {
+			// Replace server-side written pluses with spaces.
+			// If we can't decode the cookie, ignore it, it's unusable.
+			// If we can't parse the cookie, ignore it, it's unusable.
+			s = decodeURIComponent(s.replace(pluses, ' '));
+			return config.json ? JSON.parse(s) : s;
+		} catch(e) {}
+	}
+
+	function read(s, converter) {
+		var value = config.raw ? s : parseCookieValue(s);
+		return $.isFunction(converter) ? converter(value) : value;
+	}
+
+	var config = $.cookie = function (key, value, options) {
+
+		// Write
+
+		if (arguments.length > 1 && !$.isFunction(value)) {
+			options = $.extend({}, config.defaults, options);
+
+			if (typeof options.expires === 'number') {
+				var days = options.expires, t = options.expires = new Date();
+				t.setMilliseconds(t.getMilliseconds() + days * 864e+5);
+			}
+
+			return (document.cookie = [
+				encode(key), '=', stringifyCookieValue(value),
+				options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+				options.path    ? '; path=' + options.path : '',
+				options.domain  ? '; domain=' + options.domain : '',
+				options.secure  ? '; secure' : ''
+			].join(''));
+		}
+
+		// Read
+
+		var result = key ? undefined : {},
+			// To prevent the for loop in the first place assign an empty array
+			// in case there are no cookies at all. Also prevents odd result when
+			// calling $.cookie().
+			cookies = document.cookie ? document.cookie.split('; ') : [],
+			i = 0,
+			l = cookies.length;
+
+		for (; i < l; i++) {
+			var parts = cookies[i].split('='),
+				name = decode(parts.shift()),
+				cookie = parts.join('=');
+
+			if (key === name) {
+				// If second argument (value) is a function it's a converter...
+				result = read(cookie, value);
+				break;
+			}
+
+			// Prevent storing a cookie that we couldn't decode.
+			if (!key && (cookie = read(cookie)) !== undefined) {
+				result[name] = cookie;
+			}
+		}
+
+		return result;
+	};
+
+	config.defaults = {};
+
+	$.removeCookie = function (key, options) {
+		// Must not alter options, thus extending a fresh object...
+		$.cookie(key, '', $.extend({}, options, { expires: -1 }));
+		return !$.cookie(key);
+	};
+
+}));
+
+/*
+ * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+ *
+ * Uses the built in easing capabilities added In jQuery 1.1
+ * to offer multiple easing options
+ *
+ * TERMS OF USE - jQuery Easing
+ * 
+ * Open source under the BSD License. 
+ * 
+ * Copyright (C) 2008 George McGinley Smith
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
+ * conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
+ * provided with the distribution.
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
+ * or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *
+*/
+(function(jQuery){
+// t: current time, b: begInnIng value, c: change In value, d: duration
+jQuery.easing['jswing'] = jQuery.easing['swing'];
+
+jQuery.extend( jQuery.easing,
+{
+	def: 'easeOutQuad',
+	swing: function (x, t, b, c, d) {
+		//alert(jQuery.easing.default);
+		return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+	},
+	easeInQuad: function (x, t, b, c, d) {
+		return c*(t/=d)*t + b;
+	},
+	easeOutQuad: function (x, t, b, c, d) {
+		return -c *(t/=d)*(t-2) + b;
+	},
+	easeInOutQuad: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t + b;
+		return -c/2 * ((--t)*(t-2) - 1) + b;
+	},
+	easeInCubic: function (x, t, b, c, d) {
+		return c*(t/=d)*t*t + b;
+	},
+	easeOutCubic: function (x, t, b, c, d) {
+		return c*((t=t/d-1)*t*t + 1) + b;
+	},
+	easeInOutCubic: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t + b;
+		return c/2*((t-=2)*t*t + 2) + b;
+	},
+	easeInQuart: function (x, t, b, c, d) {
+		return c*(t/=d)*t*t*t + b;
+	},
+	easeOutQuart: function (x, t, b, c, d) {
+		return -c * ((t=t/d-1)*t*t*t - 1) + b;
+	},
+	easeInOutQuart: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
+		return -c/2 * ((t-=2)*t*t*t - 2) + b;
+	},
+	easeInQuint: function (x, t, b, c, d) {
+		return c*(t/=d)*t*t*t*t + b;
+	},
+	easeOutQuint: function (x, t, b, c, d) {
+		return c*((t=t/d-1)*t*t*t*t + 1) + b;
+	},
+	easeInOutQuint: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+		return c/2*((t-=2)*t*t*t*t + 2) + b;
+	},
+	easeInSine: function (x, t, b, c, d) {
+		return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+	},
+	easeOutSine: function (x, t, b, c, d) {
+		return c * Math.sin(t/d * (Math.PI/2)) + b;
+	},
+	easeInOutSine: function (x, t, b, c, d) {
+		return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+	},
+	easeInExpo: function (x, t, b, c, d) {
+		return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+	},
+	easeOutExpo: function (x, t, b, c, d) {
+		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+	},
+	easeInOutExpo: function (x, t, b, c, d) {
+		if (t==0) return b;
+		if (t==d) return b+c;
+		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+	},
+	easeInCirc: function (x, t, b, c, d) {
+		return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+	},
+	easeOutCirc: function (x, t, b, c, d) {
+		return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
+	},
+	easeInOutCirc: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+		return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
+	},
+	easeInElastic: function (x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+	},
+	easeOutElastic: function (x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+	},
+	easeInOutElastic: function (x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+		return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
+	},
+	easeInBack: function (x, t, b, c, d, s) {
+		if (s == undefined) s = 1.70158;
+		return c*(t/=d)*t*((s+1)*t - s) + b;
+	},
+	easeOutBack: function (x, t, b, c, d, s) {
+		if (s == undefined) s = 1.70158;
+		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+	},
+	easeInOutBack: function (x, t, b, c, d, s) {
+		if (s == undefined) s = 1.70158; 
+		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+	},
+	easeInBounce: function (x, t, b, c, d) {
+		return c - jQuery.easing.easeOutBounce (x, d-t, 0, c, d) + b;
+	},
+	easeOutBounce: function (x, t, b, c, d) {
+		if ((t/=d) < (1/2.75)) {
+			return c*(7.5625*t*t) + b;
+		} else if (t < (2/2.75)) {
+			return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+		} else if (t < (2.5/2.75)) {
+			return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+		} else {
+			return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+		}
+	},
+	easeInOutBounce: function (x, t, b, c, d) {
+		if (t < d/2) return jQuery.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
+		return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
+	}
+});
+		  })(jQuery);
+
+/*
+ *
+ * TERMS OF USE - EASING EQUATIONS
+ * 
+ * Open source under the BSD License. 
+ * 
+ * Copyright (C) 2001 Robert Penner
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
+ * are permitted provided that the following conditions are met:
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
+ * conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
+ * provided with the distribution.
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
+ * or promote products derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *
+ */
+/**
+ * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch and iPad, should also work with Android mobile phones (not tested yet!)
+ * Common usage: wipe images (left and right to show the previous or next image)
+ * 
+ * @author Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
+ * @version 1.1.1 (9th December 2010) - fix bug (older IE's had problems)
+ * @version 1.1 (1st September 2010) - support wipe up and wipe down
+ * @version 1.0 (15th July 2010)
+ */
+(function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft()}else{config.wipeRight()}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown()}else{config.wipeUp()}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})(jQuery);
+
+
+
+// ----------------------------------------------------------------------------
+// Get Date
+// ----------------------------------------------------------------------------	
+var getMinute = function(){
+	date = new Date();
+	date.setTime( date.getTime() + ( 30 * 60 * 1000 ));
+}
+getMinute();
+
+// ----------------------------------------------------------------------------
+// UA Check
+// ----------------------------------------------------------------------------	
+var UaObj;
+
+UaObj = (function() {
+	function UaObj() {
+		this.checkUA();
+	}
+	
+	UaObj.prototype.uaObj = {
+		uaDevice: 'device-pc',
+		uaBrouser: false
+	};
+	
+	UaObj.prototype.checkUA = function() {
+		userAgent = navigator.userAgent.toLowerCase();
+		appVersion = navigator.appVersion.toLowerCase();
+	
+		if (userAgent.indexOf('iphone') > 0 || userAgent.indexOf('ipod') > 0 || userAgent.indexOf('android') > 0) {
+			this.uaObj.uaDevice = 'device-mobile';
+		}
+		
+		if (userAgent.indexOf('ipad') > 0 ) {
+			this.uaObj.uaDevice = 'ipad';
+		}
+		
+		if (userAgent.indexOf('opera') !== -1) {
+			return this.uaObj.uaBrouser = 'opera';
+		} else if (userAgent.indexOf("msie") !== -1) { 
+			if (appVersion.indexOf("msie 6.") !== -1) {
+			return this.uaObj.uaBrouser = 'ie6';
+		} else if (appVersion.indexOf("msie 7.") !== -1) {
+			return this.uaObj.uaBrouser = 'ie7';
+		} else if (appVersion.indexOf("msie 8.") !== -1) {
+			return this.uaObj.uaBrouser = 'ie8';
+		} else if (appVersion.indexOf("msie 9.") !== -1) {
+			return this.uaObj.uaBrouser = 'ie9';
+		} else {
+			return this.uaObj.uaBrouser = 'ie10';
+		}
+		} else if (userAgent.indexOf('trident') !== -1) {
+			return this.uaObj.uaBrouser = 'ie11';
+		} else if (userAgent.indexOf('chrome') !== -1) {
+			return this.uaObj.uaBrouser = 'chrome';
+		} else if (userAgent.indexOf('safari') !== -1) {
+			return this.uaObj.uaBrouser = 'safari';
+		} else if (userAgent.indexOf('firefox') !== -1) {
+			return this.uaObj.uaBrouser = 'firefox';
+		} else {
+			return this.uaObj.uaBrouser = false;
+		}
+	};
+	
+	return UaObj;
+
+})();
+
+ua = new UaObj();	
+
+// ----------------------------------------------------------------------------
+// Window Size
+// ----------------------------------------------------------------------------	
+var Window = {
+	viewport: function() {
+		var e = window,
+				a = 'inner';
+
+		if (!('innerWidth' in window)) {
+			a = 'client';
+			e = document.documentElement || document.body;
+		}
+
+		return {
+			width: e[a + 'Width'],
+			height: e[a + 'Height']
+		};
+	}
+};
+
+(function($){
+	
+// ----------------------------------------------------------------------------
+// Roll Over
+// ----------------------------------------------------------------------------
+    rollOver = function(options){
+        var roll = options.roll,
+            unroll = options.unroll;
+        
+        var find_child = function(elm){
+            var collect_img = {},
+                collect_a   = {},
+                counter_img = 0,
+                counter_a   = 0;
+    
+            function get_elms(elm){
+                elm.children().each(function(){
+                    if($(this).attr('class') !== unroll){
+                        if(this.tagName === 'IMG' || this.tagName === 'INPUT'){
+                            collect_img[counter_img] = $(this);
+                            counter_img++;
+                        }else if(this.tagName === 'A'){
+                            var tag_a = $(this);
+                            tag_a.find('img').each(function(){
+                                if($(this).attr('class') !== unroll){
+                                    collect_img[counter_img] = $(this);
+                                    counter_img++;
+                                }
+                            });
+                        }
+
+                        get_elms($(this));
+                    }
+                });
+            }
+            
+            get_elms(elm);
+            
+            return [collect_img,collect_a];
+        };
+        
+        $('.' + roll).each(function(){
+            var items = find_child($(this)),
+                items_img = items[0],
+                onmouse_check = false;
+
+            $.each(items_img, function(i){
+                var btn = items_img[i];
+
+                $(btn).on({
+                    'mouseenter':function(){
+                        if (!onmouse_check) {
+                            onmouse_check = true;
+                            btn.attr('src', btn.attr('src').replace(/(\.[^\.]+$)/, "_o$1"));
+                        }
+                    },
+                    'mouseleave':function(){
+                        btn.attr('src', btn.attr('src').replace(/_o/, ""));
+                        onmouse_check = false;
+                    }
+                });
+            });
+        });
+    };
+
+// ----------------------------------------------------------------------------
+// Set Height
+// ----------------------------------------------------------------------------
+    $.fn.heightAdjust = function(options) {
+        //設定と変数
+        var settings = $.extend({
+                eachLine: true
+            }, options),
+            that = this,
+            counter = 0,
+            itemLength = $(that).length;
+
+        //行ごとに処理する場合はcalcOffset()でオフセット計算する処理を挟む。
+        //行ごとでない場合はそのままadjust()関数へ。
+        if(settings.eachLine){
+            calcOffset();
+        }else{
+            counter = itemLength;
+            adjust(that);
+        }
+
+        //行ごとにoffsetTopを取得する関数
+        function calcOffset() {
+            var offsetTop, itemArr= [];
+            do{
+                offsetTop = $(that).eq(counter).offset().top;//1個目の要素のoffsetTopを取得
+                itemArr.push($(that).eq(counter)[0]);//1個目の要素を配列に格納
+                counter++;
+                if(counter === itemLength){//全体の要素数と、今取得した要素の番号が同じならbreak
+                    break;
+                }
+            }while(offsetTop === $(that).eq(counter).offset().top);//次の要素のoffsetTopと、先ほど取得した要素のoffsetTopが同じなら次のループへ
+
+            adjust(itemArr);//配列に格納された要素を対象に、高さ揃えの処理を実行
+        }
+
+        //高さ揃え関数
+        function adjust(items){
+            var thisHeight, maxHeight = 0, i;
+
+            //引数で与えられた要素の中でもっともheightの高い要素のheight値を取得
+            for(i = 0; i<items.length;i++){
+                thisHeight = $(items[i]).height();
+
+                if(maxHeight < thisHeight){
+                    maxHeight = thisHeight;
+                }
+            }
+
+            //maxHeightを全要素に反映
+            $(items).each(function(){
+                $(this).height(maxHeight);
+            });			
+
+            //処理する要素がまだあれば次の要素のoffset計算へ移行
+            if(itemLength > counter){
+                calcOffset();
+            }
+        }
+
+        //jQueryのメソッドチェーンを使うために自身をreturn
+        return $(that);
+    };
+
+// ----------------------------------------------------------------------------
+// Smooth Scroll
+// ----------------------------------------------------------------------------
+    var smoothScroll = function(options){
+        var classname      = options.classname,
+            animationSpeed = options.animationSpeed,
+            easing         = options.easing,
+			point          = options.point;
+		
+        $(classname).find('a').on('click', function(event){
+            event.preventDefault();
+			
+			$(this).blur();
+			
+            var t = 'html,body';
+
+            $(t).queue([]).stop();
+
+            var $targetElement = $(this.hash),
+                scrollTo       = $targetElement.offset().top;
+
+            $(t).animate({ scrollTop: scrollTo - point }, animationSpeed, easing);
+        });  
+    };
+
+// ----------------------------------------------------------------------------
+// IMG Switch
+// ----------------------------------------------------------------------------	
+    var SPWidth    = 660,
+        TabletWidth = 837;
+
+    imgSwitchSP = function(options){
+        var classname  = options.classname;
+
+        if( Window.viewport().width < SPWidth ){
+            $(classname).each(function(){
+                $(this).attr("src",$(this).attr("src").replace('_pc', '_sp'));
+            });
+        } else{
+            $(classname).each(function(){
+                $(this).attr("src",$(this).attr("src").replace('_sp', '_pc'));
+            });
+        }
+    };
+
+    imgSwitchTablet = function(options){
+        var classname  = options.classname;
+
+        if( Window.viewport().width < TabletWidth ){
+            $(classname).each(function(){
+                $(this).attr("src",$(this).attr("src").replace('_pc', '_tb'));
+            });
+        } else{
+            $(classname).each(function(){
+                $(this).attr("src",$(this).attr("src").replace('_tb', '_pc'));
+            });
+        }
+    };
+
+    $(window).resize(function(){
+		if( ua.uaObj.uaBrouser !== 'ie8' ){
+        	imgSwitchSP({ classname:'.js-img-switch-sp' });
+        	imgSwitchTablet({classname:'.js-img-switch-tablet'});
+		}
+    }).trigger('resize');
+	
+// ----------------------------------------------------------------------------
+// Global Nav
+// ----------------------------------------------------------------------------	
+	var GlobalNav = function(){
+		var $menuBtn         = $('#btn-hamburger'),
+			$globalNav        = $('#nav-global-container'),
+			$globalNavInner01 = $('#nav-global-inner-01'),
+			$globalNavInner02 = $('#nav-global-inner-02'),
+			$close            = $('#nav-global-close'),
+			flag              = true;
+		
+		$menuBtn.on('click', function(){
+			if( flag === true ){
+				flag = false;
+				
+				$globalNav.stop().animate({ 'left' : 0 }, 200, 'easeInQuad', function(){
+					flag = true;
+				});
+			}
+		});
+		
+		$close.on('click', function(){
+			if( flag === true ){
+				flag = false;
+				
+				$globalNav.stop().animate({ 'left' : -275 }, 200, 'easeInQuad', function(){
+					flag = true;
+				});
+			}
+		});
+		
+		$(window).on('resize', function(){
+			var $menuBtnH         = $menuBtn.height(),
+				$globalNavInner01H = $globalNavInner01.height(),
+				$globalNavInner02H = $globalNavInner02.height();
+			
+			if( $menuBtnH + $globalNavInner02H >= Window.viewport().height ){
+				$globalNavInner01.height( Window.viewport().height - $menuBtnH ).addClass('scroll');
+			} else{
+				$globalNavInner01.removeClass('scroll');
+			}
+		}).trigger('resize');	
+	}
+	
+// ----------------------------------------------------------------------------
+// Book Text Link
+// ----------------------------------------------------------------------------		
+	var BookTextLink = function(){
+		$('.list-book-name-01').find('li').on('click', function(){
+			var href = $(this).find('a').attr('href');
+			
+			location.href = href;
+		});	
+	}
+	
+// ----------------------------------------------------------------------------
+// Run Function
+// ---------------------------------------------------------------------------- 	
+    $(function(){
+		smoothScroll({ classname:'#nav-pagetop', animationSpeed:600, easing:'easeOutQuint', point:0 });
+		smoothScroll({ classname:'#nav-pagetop-sp', animationSpeed:600, easing:'easeOutQuint', point:0 });
+		BookTextLink();
+		
+		
+		// if($('.set-height').length > 0){
+		// 	$(window).resize(function(){
+		// 		$('.set-height').find('a').css({ 'height' : 'auto' }).heightAdjust();
+		// 	}).trigger('resize');
+			
+		// 	$('body').bind('textresize', function(){
+		// 		$('.set-height').find('a').css({ 'height' : 'auto' }).heightAdjust();
+		// 	});
+		// }
+		
+		if( $('#nav-pagetop').length > 0 ){ 
+			GlobalNav();
+		}
+
+		if( ua.uaObj.uaDevice !== 'device-mobile' ){
+			if( ua.uaObj.uaDevice !== 'ipad' ){
+				rollOver({ roll : 'js-rollover', unroll : 'js-unrollover' });
+			}
+		}
+		
+		if( ua.uaObj.uaBrouser !== 'ie8' ){
+        	imgSwitchSP({ classname:'.js-img-switch-sp' });
+			imgSwitchTablet({ classname:'.js-img-switch-tablet' });
+		}
+    });
+	
+}(jQuery));
+
+	
+// ----------------------------------------------------------------------------
+// スムーズスクロールを強制的に無効にする
+// ---------------------------------------------------------------------------- 	
+
+if(navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
+	$('body').on("mousewheel", function () {
+		event.preventDefault();
+		var wd = event.wheelDelta;
+		var csp = window.pageYOffset;
+		window.scrollTo(0, csp - wd);
+	});
+}

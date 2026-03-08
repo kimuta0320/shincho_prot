@@ -1,0 +1,47 @@
+$(function(){
+	var $modal = $('[data-js-modal]');
+	var $modalTrigger = $('[data-js-modal-open]');
+	var $modalClose = $('[data-js-modal-close]');
+	var $modalContent = $('[data-js-modal-content]');
+	var $scrollPosition = $(window).scrollTop();
+
+	(function () {
+		if ($modal.length > 0) {
+		  _init();
+		}
+	})();
+
+	function _init() {
+		$modalTrigger.on('click',function(e){
+			e.preventDefault();
+			var $targetHref = $(this).attr('href');
+			var targetId = $targetHref.slice($targetHref.indexOf('#') + 1);
+			var $targetContent = $('[id="' + targetId + '"]');
+			$scrollPosition = $(window).scrollTop();
+			if($targetContent.length > 0){
+				$targetContent.fadeIn();
+				$('html').addClass('is-modalActive');
+				$('body').css({
+					position: 'fixed',
+					width: '100%',
+					height: 'auto',
+					minHeight: 'auto',
+					top: -$scrollPosition
+				});
+			}
+		});
+		$modalClose.on('click',function(e){
+			e.preventDefault();
+			$modalContent.fadeOut();
+			$('html').removeClass('is-modalActive');
+			$('body').css({
+				position: '',
+				width: '',
+				height: '',
+				minHeight: '',
+				top: ''
+			});
+			$(window).scrollTop($scrollPosition);
+		});
+	}
+});
